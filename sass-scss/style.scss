@@ -54,3 +54,57 @@ body {
   max-height: 1;
   height: 97vh;
 }
+
+/* ARTIST PAGE  */
+
+#artistHeader {
+  height: 35vh;
+  overflow: hidden;
+}
+
+#artistHeader img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#artistContent {
+  height: 65vh;
+  color: white;
+}
+
+.artistInfo{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+}
+
+@font-face {
+    font-family: "Circular";
+    src: url(../assets/fonts/CircularStd-Bold.otf);
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Circular";
+    src: url(../assets/fonts/CircularStd-Medium.otf);
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .artistName {
+    font-family: "Circular"; 
+    font-size: 3.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 4vh;
+  }
+
+  .bodyText {
+    font-family: "Circular";
+    font-size: 1rem;
+   
+  }
+
+
