@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+}
+
+.myBgGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(44, 44, 44) 67%);
+}
+
+.mySectionGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(39deg, rgb(0, 0, 0) 0%, rgb(44, 44, 44) 67%);
+}
+
+.asideBgColor {
+  background-color: rgb(0, 0, 0);
+}
+
+.textColor {
+  color: #777777;
+}
+
+#leftColumn {
+  color: #777777;
+  text-decoration: none;
+  fill: #777777;
+  stroke: #777777;
+}
+#leftColumn:hover {
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  fill: white;
+  stroke: white;
+}
+
+#containerList {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #777777;
+}
+
+#centralContainer {
+  overflow-y: scroll;
+  max-height: 1;
+  height: 97vh;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,56 @@
+@import "./color";
+
+body {
+  background-color: black;
+}
+
+.myBgGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(44, 44, 44, 1) 67%);
+}
+
+.mySectionGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(39deg, rgba(0, 0, 0, 1) 0%, rgba(44, 44, 44, 1) 67%);
+}
+
+.asideBgColor {
+  background-color: $body-bg-color;
+}
+
+.textColor {
+  color: $textColor;
+}
+
+#leftColumn {
+  color: $textColor;
+  text-decoration: none;
+  fill: $textColor;
+  stroke: $textColor;
+
+  &:hover {
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    fill: white;
+    stroke: white;
+  }
+}
+#containerList {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $textColor;
+}
+
+#centralContainer {
+  overflow-y: scroll;
+  max-height: 1;
+  height: 97vh;
+}
