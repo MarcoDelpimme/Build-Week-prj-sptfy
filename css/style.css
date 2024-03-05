@@ -1,3 +1,4 @@
+@import "../assets/css/circular-font.css";
 body {
   background-color: black;
 }
@@ -85,12 +86,6 @@ body {
   font-weight: 900;
 }
 
-@font-face {
-  font-family: "Circular";
-  src: url(../assets/fonts/CircularStd-Medium.otf);
-  font-weight: 300;
-  font-style: normal;
-}
 .bodyText {
   font-family: "Circular";
   font-size: 1rem;
@@ -109,6 +104,41 @@ body {
 .followingBtn:hover {
   background-color: black;
   transition: 0.5s;
+}
+
+#albumHeader {
+  height: 35vh;
+  overflow: hidden;
+  background: rgb(240, 207, 79);
+  background: linear-gradient(180deg, rgb(240, 207, 79) 22%, rgb(119, 102, 42) 100%);
+}
+
+#albumHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+#albumContent {
+  height: 65vh;
+  color: white;
+  background: rgb(97, 83, 29);
+  background: linear-gradient(180deg, rgb(97, 83, 29) 0%, rgb(100, 89, 49) 11%, rgb(23, 23, 23) 32%);
+}
+
+.albumInfo {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+}
+
+.albumName {
+  font-size: 3.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 4vh;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */

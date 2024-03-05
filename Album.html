@@ -25,7 +25,7 @@
     <!-- BOOTSTRAP -->
 
     <!-- WEBPAGE_NAME -->
-    <title>TITOLO</title>
+    <title>Album Page</title>
   </head>
   <body>
     <!-- BEGIN_MAIN -->
@@ -205,32 +205,99 @@
           <!-- UL END -->
 
           <!-- CENTRAL SECTION  -->
-          <div class="col-7 myBgGradient">
-            <div class="row text-white">
-              <!-- top post -->
-              <div class="col-12">
-                <div class="row justify-content-between">
-                  <div class="col-auto">frecce</div>
-                  <div class="col-auto">lidia</div>
+          <div class="col-7">
+            <!--  HEADER OF ALBUM PAGE -->
+            
+            <div id="albumHeader" class="position-relative align-items-center">
+              
+                <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer" style="max-width: 100px; align-self: flex-start;"/>
+              
+              
+              <div class="albumInfo ms-2">
+                <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer" style="max-width: 100px; align-self: flex-start;"/>
+
+                <p class="bodyText d-flex align-items-center gap-1">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20px">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"></g>
+                  </svg>
+                  Album
+                </p>
+                <p class="albumName">Nome Album</p>
+                <p class="bodyText">Pinguini Tattici Nucleari</p>
+              </div>
+            </div>
+
+            <!-- START BODY OF ALBUM PAGE  -->
+
+            <div id="albumContent" class="myBgGradient">
+              <!-- START FIRST ROW -->
+
+              <div class="row ms-3 py-4 align-items-center">
+                <div class="col" style="flex: 0">
+                  <svg
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    fill="#000000"
+                    width="45px"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill="#1BD760"
+                        d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM6 12v-8l6 4-6 4z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="col" style="flex: 0"><button type="button" class="followingBtn">FOLLOWING</button></div>
+
+                <div class="col" id="leftColumn">
+                  <a href="#" style="text-decoration: none">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M4 9.5C5.38071 9.5 6.5 10.6193 6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5Z"
+                        ></path>
+                        <path
+                          d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                        ></path>
+                        <path
+                          d="M22.5 12C22.5 10.6193 21.3807 9.5 20 9.5C18.6193 9.5 17.5 10.6193 17.5 12C17.5 13.3807 18.6193 14.5 20 14.5C21.3807 14.5 22.5 13.3807 22.5 12Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <!-- top post end -->
-              <div class="container" id="centralContainer">
-                <div class="card mb-3 text-white myBgGradient" style="max-width: 540px">
-                  <div class="row g-0">
-                    <div class="col-4">
-                      <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="music" />
-                    </div>
+
+              <!-- START OF POPULAR AND LIKED SONGS -->
+              <div class="row ms-3">
+                <div class="col-7">
+                  <p class="bodyText fs-6">Popolari</p>
+                  <div class="row">
+                    <div class="col">1</div>
+                    <div class="col">Album cover</div>
+                    <div class="col">Album title</div>
+                    <div class="col">Total streams</div>
+                    <div class="col">Song Length</div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <p class="bodyText fs-6">Brani che ti piacciono</p>
+
+                  <div class="row align-items-center">
+                    <div class="col-4">IMAGE</div>
                     <div class="col-8">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-6"><p>ALBUM</p></div>
-                          <div class="col-6"><p>nascondi annunci</p></div>
-                        </div>
-                        <h2 class="card-title">TITOLO CANZONE</h2>
-                        <p class="card-text">autore</p>
-                        <p class="card-text">ciao <small class="text-body-primary">ciao</small></p>
-                      </div>
+                      <p class="bodyText">Hai messo mi piace a 11 brani</p>
+                      <p>Di Yellowcard</p>
                     </div>
                   </div>
                 </div>
