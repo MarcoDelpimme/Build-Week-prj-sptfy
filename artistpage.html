@@ -7,9 +7,6 @@
     <meta name="description" content="DESCRIZIONE" />
 
     <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="LINK FONTS GOOGLE" rel="stylesheet" />
 
     <!-- FONTAWESOME 5.15.4 -->
 
@@ -19,11 +16,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- BOOTSTRAP -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!-- WEBPAGE_NAME -->
     <title>TITOLO</title>
   </head>
@@ -431,31 +436,143 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer>
-      <div class="container-fluid text-center asideBgColor">
-        <div id="audio-player">
-          <div class="row align-items-center">
-            <div class="col-3"><img src="./assets/imgs/main/image-11.jpg" alt="" width="100px" /></div>
-            <div class="col-6">
-              <audio controls id="audio-control">
-                <source src="" type="audio/mp3" />
-              </audio>
+    <footer class="position-sticky bottom-0">
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img src="./assets/imgs/main/image-12.jpg" alt="" />
             </div>
+            <div class="song-description">
+              <p class="title">titolo</p>
+              <p class="artist">artista</p>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-compress"></i>
+          </div>
+        </div>
 
-            <div class="col-3">
-              <div class="volume-controls">
-                <label for="volume">Volume:</label>
-                <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1" />
-              </div>
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-undo-alt"></i>
+          </div>
+
+          <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <!-- da completare questo timer -->
+            <span id="duration">0:00</span>
+          </div>
+          <audio id="audio-player" preload="metadata">
+            <source src="./assets/hd-epic-sax-gandalf-10-sec_f1uqKhm.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+        <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <i class="fas fa-desktop"></i>
+          <div class="volume-bar" id="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar" id="volume-bar">
+              <div class="progress" id="volume-progress"></div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
+
+    <script>
+      const audioPlayer = document.getElementById("audio-player");
+      const progress = document.getElementById("progress");
+      const currentTime = document.getElementById("current-time");
+      const duration = document.getElementById("duration");
+      const playPauseButton = document.querySelector(".play-pause");
+      const volumeBar = document.getElementById("volume-bar");
+      const volumeProgress = document.getElementById("volume-progress");
+
+      audioPlayer.volume = 0.5;
+      volumeBar.addEventListener("click", adjustVolume);
+
+      const rewindButton = document.querySelector(".fas.fa-undo-alt");
+
+      rewindButton.addEventListener("click", () => {
+        audioPlayer.currentTime = 0;
+        progress.style.width = "0%";
+      });
+
+      function adjustVolume(event) {
+        const rect = volumeBar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const percent = x / rect.width;
+        const volumeLevel = percent;
+        audioPlayer.volume = volumeLevel;
+        volumeProgress.style.width = `${percent * 100}%`;
+      }
+
+      function togglePlayPause(progressBar) {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          progress.style.width = "0%";
+        } else {
+          audioPlayer.pause();
+        }
+      }
+
+      function clickBar(event) {
+        console.log("clicked bar");
+        const percent = (event.clientX / progress.clientWidth) * 100;
+        const clickBarTime = (percent / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = clickBarTime;
+      }
+
+      progress.addEventListener("click", (event) => {
+        clickBar(event);
+      });
+
+      audioPlayer.addEventListener("timeupdate", () => {
+        const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        currentTime.textContent = formatTime(audioPlayer.currentTime);
+      });
+
+      audioPlayer.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(audioPlayer.duration);
+      });
+
+      audioPlayer.addEventListener("ended", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+        progress.style.width = "0%";
+      });
+
+      audioPlayer.addEventListener("play", () => {
+        playPauseButton.classList.remove("fa-play");
+        playPauseButton.classList.add("fa-pause");
+      });
+
+      audioPlayer.addEventListener("pause", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+      });
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      }
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
