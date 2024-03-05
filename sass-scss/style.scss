@@ -1,4 +1,6 @@
 @import "./color";
+@import "../assets/css/circular-font.css" ;
+
 
 body {
   background-color: black;
@@ -82,20 +84,12 @@ body {
 
 }
 
-  
     .artistName {
       font-size: 3.5rem;
       line-height: 1.5rem;
       margin-bottom: 4vh;
       font-weight: 900;
     }
-
-  @font-face {
-    font-family: "Circular";
-    src: url(../assets/fonts/CircularStd-Medium.otf);
-    font-weight: 300;
-    font-style: normal;
-  }
 
   .bodyText {
     font-family: "Circular";
