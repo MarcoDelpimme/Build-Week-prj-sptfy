@@ -5,6 +5,7 @@ body {
   background-color: black;
   font-size: 12px;
   color: $textColor;
+ /*  overflow-x: hidden */;
 }
 
 .myBgGradient {
@@ -40,10 +41,8 @@ body {
   }
 }
 
-
 .asideRight {
   color: $textColor;
-
 }
 
 #offcanvasBtn {
@@ -62,7 +61,7 @@ body {
 
 #containerList {
   overflow-y: scroll;
-  height: 70vh;
+  height: 66vh;
 }
 
 ::-webkit-scrollbar {
@@ -75,22 +74,26 @@ body {
 
 #centralContainer {
   overflow-y: scroll;
-  max-height: 1;
   height: 97vh;
 }
 
 /* ARTIST PAGE  */
 
+#centralSection {
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+
+}
+
 #artistHeader {
   height: 35vh;
   overflow: hidden;
- 
 }
 
 .artistImgContainer {
   height: 35vh;
   overflow: hidden;
- 
 }
 
 #artistHeader img {
@@ -234,7 +237,21 @@ body {
   &.firstDiscBtn {
     background-color: #ffffff;
     color: #2a2a2a;
-
   }
+}
 
+.discCards {
+  background-color: #181818;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  &:hover {
+    background-color: #282828;
+  }
+}
+
+.discCovers {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 2px 8px 25px 0px rgba(0, 0, 0, 0.5);
 }

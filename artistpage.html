@@ -205,7 +205,7 @@
           <!-- UL END -->
 
           <!-- CENTRAL SECTION  -->
-          <div class="col">
+          <div class="col pe-0" id="centralSection">
             <!--  HEADER OF ARTIST PAGE -->
 
             <div id="artistHeader" class="position-relative">
@@ -320,6 +320,39 @@
                     <div class="col-1">3:40</div>
                   </div>
 
+                  <!-- THIRD ITEM -->
+                  <div class="row popularSongs align-items-center p-2">
+                    <div class="col-1 songPlay">▶</div>
+                    <div class="col-1 songNum">2</div>
+                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
+                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
+                    <div class="col-3 d-none d-md-block">36.128.361</div>
+                    <div class="col-1 fs-6 heartIcon">♡</div>
+                    <div class="col-1">3:40</div>
+                  </div>
+
+                  <!-- FOURTH ITEM -->
+                  <div class="row popularSongs align-items-center p-2">
+                    <div class="col-1 songPlay">▶</div>
+                    <div class="col-1 songNum">3</div>
+                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
+                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
+                    <div class="col-3 d-none d-md-block">36.128.361</div>
+                    <div class="col-1 fs-6 heartIcon">♡</div>
+                    <div class="col-1">3:40</div>
+                  </div>
+
+                  <!-- FIFTH ITEM -->
+                  <div class="row popularSongs align-items-center p-2">
+                    <div class="col-1 songPlay">▶</div>
+                    <div class="col-1 songNum">4</div>
+                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
+                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
+                    <div class="col-3 d-none d-md-block">36.128.361</div>
+                    <div class="col-1 fs-6 heartIcon">♡</div>
+                    <div class="col-1">3:40</div>
+                  </div>
+
                   <!-- SHOW MORE -->
 
                   <div class="row showMore mt-2">
@@ -366,6 +399,72 @@
                   <a href="#"><button class="discBtn">Albums</button></a>
                   <a href="#"><button class="discBtn">Singles & EP</button></a>
                 </div>
+              </div>
+
+              <!-- DISCOGRAPHY ALBUM CARDS -->
+
+              <div class="row mt-3 px-4">
+                <!--  FIRST ALBUM --> 
+
+                <div class="col-4 col-md-3 col-lg-2 discCards">
+                  <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                  <div class="discText">
+                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p>Ultima uscita</p>
+                  </div>
+                </div>
+
+                <!--  SECOND ALBUM -->
+
+                <div class="col-4 col-md-3 col-lg-2 discCards">
+                  <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                  <div class="discText">
+                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p>Ultima uscita</p>
+                  </div>
+                </div>
+
+                <!--  THIRD ALBUM -->
+
+                <div class="col-4 col-md-3 col-lg-2 discCards">
+                  <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                  <div class="discText">
+                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p>Ultima uscita</p>
+                  </div>
+                </div>
+
+                <!--  FOURTH ALBUM -->
+
+                <div class="col-4 col-md-3 col-lg-2 d-none d-md-block discCards">
+                  <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                  <div class="discText">
+                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p>Ultima uscita</p>
+                  </div>
+                </div>
+
+                  <!--  FIFTH ALBUM -->
+
+                  <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
+                    <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                    <div class="discText">
+                      <p class="subtitles mb-0 mt-2">The Well</p>
+                      <p>Ultima uscita</p>
+                    </div>
+                  </div>
+
+                    <!--  SIXTH ALBUM -->
+
+                <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
+                  <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
+                  <div class="discText">
+                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p>Ultima uscita</p>
+                  </div>
+                </div>
+
+               <!--  END OF CARDS -->
               </div>
 
               <!-- END OF ARTIST CONTENT -->
@@ -436,27 +535,7 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer>
-      <div class="container-fluid text-center asideBgColor">
-        <div id="audio-player">
-          <div class="row align-items-center">
-            <div class="col-3"><img src="./assets/imgs/main/image-11.jpg" alt="" width="100px" /></div>
-            <div class="col-6">
-              <audio controls id="audio-control">
-                <source src="" type="audio/mp3" />
-              </audio>
-            </div>
-
-            <div class="col-3">
-              <div class="volume-controls">
-                <label for="volume">Volume:</label>
-                <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer></footer>
 
     <!-- END_FOOTER -->
 
