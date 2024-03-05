@@ -210,11 +210,11 @@
 
             <div id="artistHeader" class="position-relative">
               <div class="artistImgContainer">
-                <img src="https://e0.pxfuel.com/wallpapers/261/130/desktop-wallpaper-queen-black-queen.jpg" />
+                <img src="https://i.scdn.co/image/ab67618600001016c4ec8bcc804b212db8aa352a" />
               </div>
 
               <div class="artistInfo">
-                <p class="bodyText d-flex align-items-center gap-1">
+                <p class="subtitles d-flex align-items-center gap-1">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20px">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -230,13 +230,13 @@
                   Artista verificato
                 </p>
                 <p class="artistName">Nome Artista</p>
-                <p class="bodyText">3.000.000 ascoltatori mensili</p>
+                <p class="subtitles">3.000.000 ascoltatori mensili</p>
               </div>
             </div>
 
             <!-- START BODY OF ARTIST PAGE  -->
 
-            <div id="artistContent" class="myBgGradient">
+            <div id="artistContent" class="myBgGradient2">
               <!-- START FIRST ROW -->
 
               <div class="row ms-3 py-4 align-items-center">
@@ -285,24 +285,32 @@
 
               <!-- START OF POPULAR AND LIKED SONGS -->
               <div class="row ms-3">
-                <div class="col-7">
-                  <p class="bodyText fs-6">Popolari</p>
-                  <div class="row">
-                    <div class="col">1</div>
-                    <div class="col">Album cover</div>
-                    <div class="col">Album title</div>
-                    <div class="col">Total streams</div>
-                    <div class="col">Song Length</div>
+                <div class="col-8">
+                  <p class="subtitles fs-7">Popolari</p>
+                  <div class="row popularSongs align-items-center p-2">
+                    <div class="col-1 songPlay">▶</div>
+                    <div class="col-1 songNum">1</div>
+                    <div class="col-2 albumImg"><img src="assets/imgs/main/image-15.jpg" /></div>
+                    <div class="col-4"><a href="#">The Moon Will Sing</a></div>
+                    <div class="col-3">36.128.361</div>
+                    <div class="col-1 fs-6 heartIcon">♡</div>
+                    <div class="col-1">3:40</div>
                   </div>
                 </div>
-                <div class="col-5">
-                  <p class="bodyText fs-6">Brani che ti piacciono</p>
+                <div class="col likedSongs d-none d-xl-block">
+                  <p class="subtitles">Brani che ti piacciono</p>
 
                   <div class="row align-items-center">
-                    <div class="col-4">IMAGE</div>
-                    <div class="col-8">
-                      <p class="bodyText">Hai messo mi piace a 11 brani</p>
-                      <p>Di Yellowcard</p>
+                    <div class="col-3 d-flex align-items-center">
+                      <img
+                        class="rounded-circle img-fluid"
+                        src="assets/imgs/main/image-15.jpg"
+                        style="max-width: 50px"
+                      />
+                    </div>
+                    <div class="col-8 me-auto d-flex flex-column justify-content-center">
+                      <span class="text-white">Hai messo mi piace a 11 brani</span>
+                      <span>Di Yellowcard</span>
                     </div>
                   </div>
                 </div>

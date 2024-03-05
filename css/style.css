@@ -66,11 +66,6 @@ body {
   opacity: 0.5;
 }
 
-#artistContent {
-  height: 65vh;
-  color: white;
-}
-
 .artistInfo {
   color: white;
   font-size: 20px;
@@ -82,14 +77,20 @@ body {
 .artistName {
   font-size: 3.5rem;
   line-height: 1.5rem;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
   font-weight: 900;
 }
 
-.bodyText {
+.subtitles {
   font-family: "Circular";
   font-size: 1rem;
   vertical-align: middle;
+  color: white;
+}
+
+#artistContent {
+  height: 65vh;
+  color: #777777;
 }
 
 .followingBtn {
@@ -104,6 +105,58 @@ body {
 .followingBtn:hover {
   background-color: black;
   transition: 0.5s;
+}
+
+.albumImg img {
+  max-width: 40px;
+  border-radius: 5px;
+}
+
+.popularSongs {
+  font-size: 12px;
+  color: #777777;
+}
+.popularSongs:hover {
+  color: white;
+  background-color: #232323;
+  border-radius: 5px;
+}
+.popularSongs a {
+  text-decoration: none;
+  color: white;
+}
+.popularSongs a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.heartIcon {
+  opacity: 0;
+}
+
+.popularSongs:hover .heartIcon {
+  opacity: 1;
+}
+
+.popularSongs:hover .songNum {
+  display: none;
+}
+
+.songPlay {
+  display: none;
+}
+
+.popularSongs:hover .songPlay {
+  display: block;
+}
+
+.likedSongs {
+  font-size: 12px;
+}
+
+.myBgGradient2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(4deg, rgb(0, 0, 0) 50%, rgb(8, 37, 79) 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
