@@ -65,6 +65,7 @@ body {
 #artistHeader img {
   width: 100%;
   object-fit: cover;
+  opacity: 0.5;
 }
 
 #artistContent {
@@ -78,14 +79,16 @@ body {
   position: absolute;
   bottom: 2vh;
   left: 2vh;
+
 }
 
-@font-face {
-    font-family: "Circular";
-    src: url(../assets/fonts/CircularStd-Bold.otf);
-    font-weight: 900;
-    font-style: normal;
-  }
+  
+    .artistName {
+      font-size: 3.5rem;
+      line-height: 1.5rem;
+      margin-bottom: 4vh;
+      font-weight: 900;
+    }
 
   @font-face {
     font-family: "Circular";
@@ -94,17 +97,26 @@ body {
     font-style: normal;
   }
 
-  .artistName {
-    font-family: "Circular"; 
-    font-size: 3.5rem;
-    line-height: 1.5rem;
-    margin-bottom: 4vh;
-  }
-
   .bodyText {
     font-family: "Circular";
     font-size: 1rem;
+    vertical-align: middle;
    
   }
 
+  .followingBtn {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-family: "Circular";
+    font-size: 0.6rem;
+    padding: 5px 10px;
 
+    &:hover {
+      background-color: black;
+      transition: 0.5s;
+    }
+  }
+
+  
