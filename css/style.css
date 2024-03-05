@@ -1,3 +1,4 @@
+@import "../assets/css/circular-font.css";
 body {
   background-color: black;
 }
@@ -85,12 +86,6 @@ body {
   font-weight: 900;
 }
 
-@font-face {
-  font-family: "Circular";
-  src: url(../assets/fonts/CircularStd-Medium.otf);
-  font-weight: 300;
-  font-style: normal;
-}
 .bodyText {
   font-family: "Circular";
   font-size: 1rem;

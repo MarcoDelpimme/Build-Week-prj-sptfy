@@ -1,6 +1,5 @@
 @import "./color";
-@import "../assets/css/circular-font.css" ;
-
+@import "../assets/css/circular-font.css";
 
 body {
   background-color: black;
@@ -75,42 +74,38 @@ body {
   color: white;
 }
 
-.artistInfo{
+.artistInfo {
   color: white;
   font-size: 20px;
   position: absolute;
   bottom: 2vh;
   left: 2vh;
-
 }
 
-    .artistName {
-      font-size: 3.5rem;
-      line-height: 1.5rem;
-      margin-bottom: 4vh;
-      font-weight: 900;
-    }
+.artistName {
+  font-size: 3.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 4vh;
+  font-weight: 900;
+}
 
-  .bodyText {
-    font-family: "Circular";
-    font-size: 1rem;
-    vertical-align: middle;
-   
+.bodyText {
+  font-family: "Circular";
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.followingBtn {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-family: "Circular";
+  font-size: 0.6rem;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: black;
+    transition: 0.5s;
   }
-
-  .followingBtn {
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    border-radius: 5px;
-    font-family: "Circular";
-    font-size: 0.6rem;
-    padding: 5px 10px;
-
-    &:hover {
-      background-color: black;
-      transition: 0.5s;
-    }
-  }
-
-  
+}
