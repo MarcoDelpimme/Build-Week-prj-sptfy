@@ -64,6 +64,10 @@ body {
   width: 12px;
 }
 
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: #777777;
 }
@@ -75,7 +79,7 @@ body {
 
 /* ARTIST PAGE  */
 #centralSection {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100vh;
   overflow-x: hidden;
 }
