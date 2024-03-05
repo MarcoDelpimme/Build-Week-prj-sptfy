@@ -1,6 +1,8 @@
 @import "../assets/css/circular-font.css";
 body {
   background-color: black;
+  font-size: 12px;
+  color: #777777;
 }
 
 .myBgGradient {
@@ -33,6 +35,23 @@ body {
   cursor: pointer;
   fill: white;
   stroke: white;
+}
+
+.asideRight {
+  color: #777777;
+}
+
+#offcanvasBtn {
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+#offcanvasBtn:hover {
+  background-color: #343434;
 }
 
 #containerList {
@@ -69,6 +88,9 @@ body {
   width: 100%;
   object-fit: cover;
   opacity: 0.5;
+  position: fixed;
+  height: 35vh;
+  z-index: -1;
 }
 
 .artistInfo {
@@ -196,7 +218,7 @@ body {
 .discBtn:hover {
   background-color: #343434;
 }
-.discBtn:first-child {
+.discBtn.firstDiscBtn {
   background-color: #ffffff;
   color: #2a2a2a;
 }
