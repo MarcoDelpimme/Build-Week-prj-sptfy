@@ -60,6 +60,11 @@ body {
   overflow: hidden;
 }
 
+.artistImgContainer {
+  height: 35vh;
+  overflow: hidden;
+}
+
 #artistHeader img {
   width: 100%;
   object-fit: cover;
@@ -76,11 +81,21 @@ body {
 
 .artistName {
   font-size: 3.5rem;
-  line-height: 1.5rem;
-  margin-bottom: 3vh;
+  line-height: 3.5rem;
+  margin-bottom: 2.5vh;
+  margin-top: -2vh;
   font-weight: 900;
 }
 
+@media screen and (max-width: 992px) {
+  .artistName {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2vh;
+    margin-top: -2vh;
+    font-weight: 900;
+  }
+}
 .subtitles {
   font-family: "Circular";
   font-size: 1rem;
@@ -157,6 +172,33 @@ body {
 .myBgGradient2 {
   background: rgb(0, 0, 0);
   background: linear-gradient(4deg, rgb(0, 0, 0) 50%, rgb(8, 37, 79) 100%);
+}
+
+.showMore a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Circular";
+  color: #777777;
+}
+.showMore a:hover {
+  color: white;
+}
+
+.discBtn {
+  border: none;
+  background-color: #2A2A2A;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+.discBtn:hover {
+  background-color: #343434;
+}
+.discBtn:first-child {
+  background-color: #ffffff;
+  color: #2a2a2a;
 }
 
 /*# sourceMappingURL=style.css.map */
