@@ -38,7 +38,7 @@ body {
 }
 #containerList {
   overflow-y: scroll;
-  height: 70vh;
+  height: 68vh;
 }
 
 ::-webkit-scrollbar {
@@ -57,13 +57,9 @@ body {
 
 #btn1 {
   background-color: $btn-green;
-  margin-right: 1.5rem;
-}
-#btn2 {
-  margin-right: 1.5rem;
 }
 
-#top-buttons {
+#allCardBuonasera {
   background-color: $myGrey;
   border-radius: 10px;
 }
