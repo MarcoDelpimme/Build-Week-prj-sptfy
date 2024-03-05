@@ -208,15 +208,95 @@
           <div class="col-7 myBgGradient">
             <div class="row text-white">
               <!-- top post -->
-              <div class="col-12">
-                <div class="row justify-content-between">
-                  <div class="col-auto">frecce</div>
-                  <div class="col-auto">lidia</div>
+
+              <div class="row g-0">
+                <div class="col-1">
+                  <div>
+                    <svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      height="16"
+                    >
+                      <path
+                        d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-1">
+                  <div>
+                    <svg
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      height="16"
+                    >
+                      <path
+                        d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-10">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-sm rounded-pill btn-dark"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="./assets/imgs/main/image-13.jpg"
+                        class="rounded-circle"
+                        alt="Immagine"
+                        style="width: 25px; height: 25px; margin-right: 10px"
+                      />
+                      Lidia Nautilus ...
+                      <svg
+                        width="15px"
+                        height="15px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Opzione 1</a>
+                      <a class="dropdown-item" href="#">Opzione 2</a>
+                      <a class="dropdown-item" href="#">Opzione 3</a>
+                    </div>
+                  </div>
                 </div>
               </div>
+
               <!-- top post end -->
               <div class="container" id="centralContainer">
-                <div class="card mb-3 text-white myBgGradient" style="max-width: 540px">
+                <div class="card mb-8 text-white myBgGradient border-0" style="max-width: 840px">
                   <div class="row g-0">
                     <div class="col-4">
                       <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="music" />
@@ -224,12 +304,282 @@
                     <div class="col-8">
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-6"><p>ALBUM</p></div>
-                          <div class="col-6"><p>nascondi annunci</p></div>
+                          <div class="col-8"><p>ALBUM</p></div>
+                          <div class="col-4">
+                            <button type="button" class="btn btn-sm rounded-pill btn-dark text-secondary">
+                              NASCONDI ANNUNCI
+                            </button>
+                          </div>
                         </div>
                         <h2 class="card-title">TITOLO CANZONE</h2>
                         <p class="card-text">autore</p>
-                        <p class="card-text">ciao <small class="text-body-primary">ciao</small></p>
+
+                        <div id="buttons">
+                          <button type="button" class="btn btn-lg rounded-pill px-4" id="btn1">Play</button
+                          ><button type="button" class="btn btn-dark btn-lg rounded-pill border border-white px-4">
+                            Salva
+                          </button>
+                          <a href="" id="leftColumn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M4 9.5C5.38071 9.5 6.5 10.6193 6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5Z"
+                                ></path>
+                                <path
+                                  d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                                ></path>
+                                <path
+                                  d="M22.5 12C22.5 10.6193 21.3807 9.5 20 9.5C18.6193 9.5 17.5 10.6193 17.5 12C17.5 13.3807 18.6193 14.5 20 14.5C21.3807 14.5 22.5 13.3807 22.5 12Z"
+                                ></path>
+                              </g>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid" id="greetings">
+                  <div class="row"><h2>Buonasera</h2></div>
+                  <div class="container-fluid" id="orizontalCards">
+                    <div class="row">
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="col" id="top-buttons">
+                          <div class="background-card mb-3" style="max-width: 140px">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img
+                                  src="https://www.adobe.com/express/create/cover/media_1a853fd182c6e60cdbc8d24538ff63f378b5181c8.jpeg?width=400&format=jpeg&optimize=medium"
+                                  class="img-fluid rounded-start"
+                                  style="height: 100%; min-width: 100%"
+                                  alt="..."
+                                />
+                              </div>
+                              <div class="col-md-8 d-flex align-items-center">
+                                <div class="card-body">
+                                  <h6 class="card-title">Card title</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid" id="altrodiciòchetipiace">
+                  <div class="row">
+                    <div class="col-10">
+                      <h4>Altro di ciò che ti piace</h4>
+                    </div>
+                    <div class="col-2"><span>Visualizza tutto</span></div>
+                  </div>
+                  <div class="container-fluid">
+                    <div class="row gy-25">
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-12 col-md-6 p-3">
+                        <div class="card h-100" id="darker">
+                          <img src="./assets/imgs/main/image-17.jpg" class="card-img-top p-2" alt="..." />
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="d-flex align-items-baseline justify-content-between">
+                              <p class="card-text">Chill lofi hip-hop mix.</p>
+                              <i class="fa-solid fa-play 2-xl"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
