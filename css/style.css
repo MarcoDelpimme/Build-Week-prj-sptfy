@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 body {
   background-color: black;
 }
@@ -53,71 +54,190 @@ body {
   height: 97vh;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "circular std book", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  font-size: 14px;
+}
+
 .music-player {
-  background-color: #bdbdbd;
-  padding: 25px;
-  text-align: center;
-}
-
-#progress {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  background-color: #535353;
-  border-radius: 4px;
-  margin: 40px 0;
-}
-
-#progress::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #1ed760;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px solid #121212;
-  box-shadow: 0 5px 5px rgba(53, 255, 26, 0.22);
-}
-
-.controls {
+  --primary-color: #ddd;
+  --secondary-color: #999;
+  --green-color: #2d5;
+  --padding: 1em;
+  background-color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 7rem;
+  padding: var(--padding);
+  color: var(--primary-color);
 }
-.controls div {
-  width: 60px;
-  height: 60px;
-  margin: 20px;
-  background: #121212;
-  display: inline-flex;
+
+i {
+  color: var(--secondary-color);
+}
+
+i:hover {
+  color: var(--primary-color);
+}
+
+.song-bar {
+  position: absolute;
+  left: var(--padding);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 25%;
+}
+
+.song-infos {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.image-container {
+  --size: 4.5em;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.song-description p {
+  margin: 0.2em;
+}
+
+.title,
+.artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.title:hover,
+.artist:hover {
+  text-decoration: underline;
+}
+
+.artist {
+  color: var(--secondary-color);
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+}
+
+.progress-controller {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  color: var(--secondary-color);
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.play-pause {
+  display: inline-block;
+  padding: 1em;
+  background-color: var(--primary-color);
+  color: #111;
+  border-radius: 50%;
+}
+
+.play-pause:hover {
+  transform: scale(1.1);
+  color: #111;
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1em;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: rgba(204, 204, 204, 0.2666666667);
+}
+
+.progress {
+  position: relative;
+  height: 100%;
+  width: 0; /*Da tenere d'occhio */
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+.progress-bar:hover .progress {
+  background-color: var(--green-color);
+}
+
+.progress-bar:hover .progress::after {
+  content: "";
+  position: absolute;
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
   border-radius: 50%;
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(26, 255, 83, 0.22);
-  cursor: pointer;
+  background-color: var(--primary-color);
+  transform: translate(50%, calc(2px - 50%));
 }
 
-.controls div:nth-child(2) {
-  transform: scale(1.5);
-  background: #1ed760;
-  color: #121212;
+.other-features {
+  position: absolute;
+  right: var(--padding);
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
-#volume {
-  -webkit-appearance: none;
-  background-color: #767676;
-  border-radius: 25px;
-  margin: 10px;
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
 }
 
-#volume::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #1ed760;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 3px solid #121212;
-  box-shadow: 0 5px 5px rgba(53, 255, 26, 0.22);
+.volume-bar .progress-bar {
+  width: 6em;
+}
+
+.volume-bar .progress-bar:hover .progress::after {
+  --size: 0.8em;
+  content: "";
+}
+
+.volume-bar .progress {
+  transition: width 0.2s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

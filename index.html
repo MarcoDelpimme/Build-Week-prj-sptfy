@@ -16,6 +16,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -356,93 +364,141 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer class="position position-sticky bottom-0">
-      <div class="container-fluid d-flex align-items-center justify-content-center">
-        <div class="music-player container-fluid">
-          <div class="row align-items-center">
-            <div class="col-3">
-              <div class="row align-items-center">
-                <div class="col-4"><img src="./assets/imgs/main/image-11.jpg" id="songImg" width="100%" /></div>
-                <div class="col-8">
-                  <div class="row text-start">
-                    <div class="col-12"><h5>titolo CANZONE</h5></div>
-                    <div class="col-12"><p>nome artista</p></div>
-                  </div>
-                </div>
-              </div>
+    <footer class="position-sticky bottom-0">
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img src="./assets/imgs/main/image-12.jpg" alt="" />
             </div>
-            <div class="col-6">
-              <div class="controls">
-                <div><i class="bi bi-skip-backward-fill"></i></div>
-                <div onclick="playPause()"><i class="bi bi-play-fill" id="ctrlIcon"></i></div>
-                <div><i class="bi bi-skip-forward-fill"></i></div>
-              </div>
-              <audio id="song">
-                <source src="./assets/hd-epic-sax-gandalf-10-sec_f1uqKhm.mp3" />
-              </audio>
-              <input type="range" value="0" id="progress" />
+            <div class="song-description">
+              <p class="title">titolo</p>
+              <p class="artist">artista</p>
             </div>
-            <div class="col-3">
-              <div class="volume-controls">
-                <div><i class="bi bi-volume-up-fill"></i></div>
-                <input type="range" value="100" id="volume" />
-              </div>
+          </div>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-compress"></i>
+          </div>
+        </div>
+
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-undo-alt"></i>
+          </div>
+
+          <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <!-- da completare questo timer -->
+            <span id="duration">0:00</span>
+          </div>
+          <audio id="audio-player" preload="metadata">
+            <source src="./assets/hd-epic-sax-gandalf-10-sec_f1uqKhm.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+        <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <i class="fas fa-desktop"></i>
+          <div class="volume-bar" id="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar" id="volume-bar">
+              <div class="progress" id="volume-progress"></div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
+
     <script>
-      let ctrlIcon = document.getElementById("ctrlIcon");
-      let progress = document.getElementById("progress");
-      let song = document.getElementById("song");
+      const audioPlayer = document.getElementById("audio-player");
+      const progress = document.getElementById("progress");
+      const currentTime = document.getElementById("current-time");
+      const duration = document.getElementById("duration");
+      const playPauseButton = document.querySelector(".play-pause");
+      const volumeBar = document.getElementById("volume-bar");
+      const volumeProgress = document.getElementById("volume-progress");
 
-      song.onloadedmetadata = function () {
-        progress.max = song.duration;
-        progress.value = song.currentTime;
-      };
+      audioPlayer.volume = 0.5;
+      volumeBar.addEventListener("click", adjustVolume);
 
-      function playPause() {
-        if (ctrlIcon.classList.contains("bi-pause-fill")) {
-          song.pause();
-          ctrlIcon.classList.remove("bi-pause-fill");
-          ctrlIcon.classList.add("bi-play-fill");
+      const rewindButton = document.querySelector(".fas.fa-undo-alt");
+
+      rewindButton.addEventListener("click", () => {
+        audioPlayer.currentTime = 0;
+        progress.style.width = "0%";
+      });
+
+      function adjustVolume(event) {
+        const rect = volumeBar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const percent = x / rect.width;
+        const volumeLevel = percent;
+        audioPlayer.volume = volumeLevel;
+        volumeProgress.style.width = `${percent * 100}%`;
+      }
+
+      function togglePlayPause(progressBar) {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          progress.style.width = "0%";
         } else {
-          song.play();
-          ctrlIcon.classList.add("bi-pause-fill");
-          ctrlIcon.classList.remove("bi-play-fill");
+          audioPlayer.pause();
         }
       }
 
-      let volumeControl = document.getElementById("volume");
-
-      volumeControl.addEventListener("input", function () {
-        song.volume = volumeControl.value / 100;
-      });
-
-      song.onended = function () {
-        ctrlIcon.classList.remove("bi-pause-fill");
-        ctrlIcon.classList.add("bi-play-fill");
-        progress.value = 0;
-        song.currentTime = 0;
-      };
-
-      if (song.play()) {
-        setInterval(() => {
-          progress.value = song.currentTime;
-        }, 500);
+      function clickBar(event) {
+        console.log("clicked bar");
+        const percent = (event.clientX / progress.clientWidth) * 100;
+        const clickBarTime = (percent / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = clickBarTime;
       }
 
-      progress.onchange = function () {
-        song.play();
-        song.currentTime = progress.value;
-        ctrlIcon.classList.add("bi-pause-fill");
-        ctrlIcon.classList.remove("bi-play-fill");
-      };
+      progress.addEventListener("click", (event) => {
+        clickBar(event);
+      });
+
+      audioPlayer.addEventListener("timeupdate", () => {
+        const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        currentTime.textContent = formatTime(audioPlayer.currentTime);
+      });
+
+      audioPlayer.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(audioPlayer.duration);
+      });
+
+      audioPlayer.addEventListener("ended", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+        progress.style.width = "0%";
+      });
+
+      audioPlayer.addEventListener("play", () => {
+        playPauseButton.classList.remove("fa-play");
+        playPauseButton.classList.add("fa-pause");
+      });
+
+      audioPlayer.addEventListener("pause", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+      });
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      }
     </script>
 
     <script
