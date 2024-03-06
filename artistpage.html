@@ -39,9 +39,10 @@
     <!-- BEGIN_MAIN -->
     <main>
       <div class="container-fluid">
-        <div class="row align-content-center">
+        <div class="row">
+          <!-- START LEFT ASIDE -->
           <div class="col-3 asideBgColor textColor ps-4">
-            <div class="container" style="height: 27vh">
+            <div class="firstBlock border-bottom border-secondary">
               <a href="#" style="text-decoration: none">
                 <div class="col-12 my-3" id="leftColumn">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
@@ -63,9 +64,9 @@
               </a>
 
               <!-- HOME SEARCH LIBRARY START  -->
-              <div class="row align-content-center">
+              <div class="row">
                 <a href="./index.html" style="text-decoration: none">
-                  <div class="col-12" id="leftColumn">
+                  <div class="col-12 d-flex align-items-center gap-2" id="leftColumn">
                     <svg
                       data-encore-id="icon"
                       role="img"
@@ -82,20 +83,33 @@
                   </div>
                 </a>
 
-                <a href="#" style="text-decoration: none">
-                  <div class="col-12 my-2" id="leftColumn">
-                    <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
-                        class="myIcon"
-                      ></path>
-                    </svg>
-                    <span class="ps-1">Search</span>
-                  </div>
-                </a>
+                <div class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap" id="leftColumn">
+                  <form id="searchForm">
+                    <button
+                      type="submit"
+                      style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
+                    >
+                      <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                          class="myIcon"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <input
+                      type="text"
+                      id="artistName"
+                      name="artistName"
+                      placeholder="Search"
+                      required
+                      style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
+                    />
+                  </form>
+                </div>
 
                 <a href="#" style="text-decoration: none">
-                  <div class="col-12 mb-4" id="leftColumn">
+                  <div class="col-12 d-flex align-items-center gap-2 mb-4" id="leftColumn">
                     <svg
                       data-encore-id="icon"
                       role="img"
@@ -113,6 +127,7 @@
                   </div>
                 </a>
               </div>
+
               <!-- HOME SEARCH LIBRARY END -->
 
               <!-- PLAYLIST TASTE START -->
@@ -154,7 +169,7 @@
               </a>
 
               <a href="#" style="text-decoration: none">
-                <div class="col-12 border-bottom border-solid border-secondary mb-3 pb-3" id="leftColumn">
+                <div class="col-12 mb-4" id="leftColumn">
                   <img src="https://i.ibb.co/zXR340n/Schermata-2024-03-04-alle-12-33-49.png" alt="" width="25px" />
                   <span class="ps-1">Podcast </span>
                 </div>
@@ -164,9 +179,42 @@
             <!-- PLAYLIST TASTE END -->
 
             <!-- UL START -->
-            <div class="col-12 d-flex flex-column">
-              <ul class="list-unstyled" id="containerList">
+            <div class="secondBlock overflow-y-scroll mt-3" style="max-height: 50vh" id="containerList">
+              <ul class="list-unstyled">
                 <li>ciaogenera con gs</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
+                <li>ciao</li>
                 <li>ciao</li>
                 <li>ciao</li>
                 <li>ciao</li>
@@ -213,7 +261,7 @@
           <!-- UL END -->
 
           <!-- CENTRAL SECTION  -->
-          <div class="col pe-0" id="centralSection">
+          <div class="col p-0" id="centralSection">
             <!--  HEADER OF ARTIST PAGE -->
             <div id="artistHeader" class="position-relative">
               <div class="artistImgContainer">

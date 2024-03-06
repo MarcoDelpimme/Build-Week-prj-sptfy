@@ -60,7 +60,7 @@ function displayResults(artistData) {
       const rank = album.rank;
 
       const template = `
-<div class="col-1 songPlay " data-preview="${album.preview} >▶</div>
+<div class="col-1 songPlay " data-preview=${album.preview} >▶</div>
 <div class="col-1 songNum">${index + 1}</div>
 <div class="col-2 albumImg gx-1"><img src="${albumImage}" /></div>
 <div class="col-4 d-flex me-auto"><a href="#">${songTitle}</a></div>
