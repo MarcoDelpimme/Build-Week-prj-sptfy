@@ -25,14 +25,14 @@
     <!-- BOOTSTRAP -->
 
     <!-- WEBPAGE_NAME -->
-    <title>TITOLO</title>
+    <title>Spotify Clone</title>
   </head>
   <body>
     <!-- BEGIN_MAIN -->
     <main>
       <div class="container-fluid">
         <div class="row align-content-center">
-          <div class="col-3 asideBgColor textColor ps-4">
+          <div class="col-3 asideBgColor textColor ps-4 d-sm-none d-md-block d-none d-sm-block">
             <div class="container" style="height: 27vh">
               <a href="#" style="text-decoration: none">
                 <div class="col-12 my-3" id="leftColumn">
@@ -300,9 +300,13 @@
                     <div class="col-8">
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-8"><p>ALBUM</p></div>
-                          <div class="col-4">
-                            <button type="button" class="btn btn-sm rounded-pill btn-dark text-secondary">
+                          <div class="col-9"><p>ALBUM</p></div>
+                          <div class="col-3">
+                            <button
+                              type="button"
+                              class="btn btn-sm rounded-pill btn-dark text-secondary"
+                              id="nascondi-annunci"
+                            >
                               NASCONDI ANNUNCI
                             </button>
                           </div>
@@ -459,7 +463,7 @@
                     <div class="col-10">
                       <h4 class="fw-bold">Altro di ciò che ti piace</h4>
                     </div>
-                    <div class="col-2"><span>VISUALIZZA TUTTO</span></div>
+                    <div class="col-2 fw-bold" id="visualizza-tutto"><span>VISUALIZZA TUTTO</span></div>
                   </div>
                   <div class="container-fluid">
                     <div class="row gy-25">
