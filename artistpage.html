@@ -19,6 +19,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -56,7 +64,7 @@
 
               <!-- HOME SEARCH LIBRARY START  -->
               <div class="row align-content-center">
-                <a href="#" style="text-decoration: none">
+                <a href="./index.html" style="text-decoration: none">
                   <div class="col-12" id="leftColumn">
                     <svg
                       data-encore-id="icon"
@@ -207,10 +215,9 @@
           <!-- CENTRAL SECTION  -->
           <div class="col pe-0" id="centralSection">
             <!--  HEADER OF ARTIST PAGE -->
-
             <div id="artistHeader" class="position-relative">
               <div class="artistImgContainer">
-                <img src="https://i.scdn.co/image/ab67618600001016c4ec8bcc804b212db8aa352a" />
+                <img id="imgBg" src="" />
               </div>
 
               <div class="artistInfo">
@@ -295,63 +302,13 @@
 
               <!-- START OF POPULAR AND LIKED SONGS -->
               <div class="row px-3">
-                <div class="col-12 col-xl-8 mb-4">
+                <div class="col-12 col-xl-8 mb-4" id="containerSongs">
                   <p class="subtitles">Popolari</p>
 
                   <!-- FIRST ITEM  -->
-                  <div class="row popularSongs align-items-center p-2">
-                    <div class="col-1 songPlay">▶</div>
-                    <div class="col-1 songNum">1</div>
-                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
-                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
-                    <div class="col-3 d-none d-md-block">36.128.361</div>
-                    <div class="col-1 fs-6 heartIcon">♡</div>
-                    <div class="col-1">3:40</div>
-                  </div>
+                  <!-- generiamola dinamicamente -->
 
-                  <!-- SECOND ITEM -->
-                  <div class="row popularSongs align-items-center p-2">
-                    <div class="col-1 songPlay">▶</div>
-                    <div class="col-1 songNum">1</div>
-                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
-                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
-                    <div class="col-3 d-none d-md-block">36.128.361</div>
-                    <div class="col-1 fs-6 heartIcon">♡</div>
-                    <div class="col-1">3:40</div>
-                  </div>
-
-                  <!-- THIRD ITEM -->
-                  <div class="row popularSongs align-items-center p-2">
-                    <div class="col-1 songPlay">▶</div>
-                    <div class="col-1 songNum">2</div>
-                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
-                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
-                    <div class="col-3 d-none d-md-block">36.128.361</div>
-                    <div class="col-1 fs-6 heartIcon">♡</div>
-                    <div class="col-1">3:40</div>
-                  </div>
-
-                  <!-- FOURTH ITEM -->
-                  <div class="row popularSongs align-items-center p-2">
-                    <div class="col-1 songPlay">▶</div>
-                    <div class="col-1 songNum">3</div>
-                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
-                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
-                    <div class="col-3 d-none d-md-block">36.128.361</div>
-                    <div class="col-1 fs-6 heartIcon">♡</div>
-                    <div class="col-1">3:40</div>
-                  </div>
-
-                  <!-- FIFTH ITEM -->
-                  <div class="row popularSongs align-items-center p-2">
-                    <div class="col-1 songPlay">▶</div>
-                    <div class="col-1 songNum">4</div>
-                    <div class="col-2 albumImg gx-1"><img src="assets/imgs/main/image-15.jpg" /></div>
-                    <div class="col-4 d-flex me-auto"><a href="#">The Moon Will Sing</a></div>
-                    <div class="col-3 d-none d-md-block">36.128.361</div>
-                    <div class="col-1 fs-6 heartIcon">♡</div>
-                    <div class="col-1">3:40</div>
-                  </div>
+                  <!-- generiamola dinamicamente -->
 
                   <!-- SHOW MORE -->
 
@@ -646,7 +603,59 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer></footer>
+    <footer>
+      <footer class="position-absolute bottom-0" style="width: 100%">
+        <div class="music-player">
+          <div class="song-bar">
+            <div class="song-infos">
+              <div class="image-container">
+                <img src="./assets/imgs/main/image-12.jpg" alt="" />
+              </div>
+              <div class="song-description">
+                <p class="title">titolo</p>
+                <p class="artist">artista</p>
+              </div>
+            </div>
+            <div class="icons">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-compress"></i>
+            </div>
+          </div>
+
+          <div class="progress-controller">
+            <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
+            </div>
+
+            <div class="progress-container">
+              <span id="current-time">0:00</span>
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              <!-- da completare questo timer -->
+              <span id="duration">0:00</span>
+            </div>
+            <audio id="audio-player" preload="metadata">
+              <source src="" type="audio/mp3" id="sourceSong" />
+            </audio>
+          </div>
+          <div class="other-features">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <div class="volume-bar" id="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar" id="volume-bar">
+                <div class="progress" id="volume-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </footer>
 
     <!-- END_FOOTER -->
 
@@ -659,6 +668,88 @@
 
     <script src="./assets/script/artistpage.js
     "></script>
+
+    <script>
+      const audioPlayer = document.getElementById("audio-player");
+      const progress = document.getElementById("progress");
+      const currentTime = document.getElementById("current-time");
+      const duration = document.getElementById("duration");
+      const playPauseButton = document.querySelector(".play-pause");
+      const volumeBar = document.getElementById("volume-bar");
+      const volumeProgress = document.getElementById("volume-progress");
+
+      audioPlayer.volume = 0.5;
+      volumeBar.addEventListener("click", adjustVolume);
+
+      const rewindButton = document.querySelector(".fas.fa-undo-alt");
+
+      rewindButton.addEventListener("click", () => {
+        audioPlayer.currentTime = 0;
+        progress.style.width = "0%";
+      });
+
+      function adjustVolume(event) {
+        const rect = volumeBar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const percent = x / rect.width;
+        const volumeLevel = percent;
+        audioPlayer.volume = volumeLevel;
+        volumeProgress.style.width = `${percent * 100}%`;
+      }
+
+      function togglePlayPause(progressBar) {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          progress.style.width = "0%";
+        } else {
+          audioPlayer.pause();
+        }
+      }
+
+      function clickBar(event) {
+        console.log("clicked bar");
+        const percent = (event.clientX / progress.clientWidth) * 100;
+        const clickBarTime = (percent / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = clickBarTime;
+      }
+
+      progress.addEventListener("click", (event) => {
+        clickBar(event);
+      });
+
+      audioPlayer.addEventListener("timeupdate", () => {
+        const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        currentTime.textContent = formatTime(audioPlayer.currentTime);
+      });
+
+      audioPlayer.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(audioPlayer.duration);
+      });
+
+      audioPlayer.addEventListener("ended", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+        progress.style.width = "0%";
+      });
+
+      audioPlayer.addEventListener("play", () => {
+        playPauseButton.classList.remove("fa-play");
+        playPauseButton.classList.add("fa-pause");
+      });
+
+      audioPlayer.addEventListener("pause", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+      });
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      }
+    </script>
     <!-- END_SCRIPT -->
   </body>
 </html>

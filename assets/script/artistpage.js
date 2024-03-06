@@ -41,37 +41,49 @@ function searchDeezerArtist(artistName) {
 function displayResults(artistData) {
   console.log("Artist Data:", artistData);
 
-  const resultsContainer = document.getElementById("resultsContainer");
-
-  resultsContainer.innerHTML = "";
+  const imgBg = document.getElementById("imgBg");
+  // let songHTML = "";
 
   if (artistData && artistData.data) {
     const albums = artistData.data;
     console.log("Albums:", albums);
+    imgBg.src = albums[0].artist.picture_xl;
 
-    albums.forEach((album) => {
-      const albumTitle = album.album.title;
+    albums.forEach((album, index) => {
+      const resultsContainer = document.getElementById("containerSongs");
+      // const albumTitle = album.album.title;
+      const songTitle = album.title;
+
+      const duration = album.duration + "s";
       const albumImage = album.album.cover_medium;
-      const tracks = album.album.tracklist;
+      // const tracks = album.album.tracklist;
+      const rank = album.rank;
 
-      console.log("Album Title:", albumTitle);
-      console.log("Album Image:", albumImage);
-      console.log("Tracks:", tracks);
+      const template = `
+<div class="col-1 songPlay " data-preview="${album.preview} >▶</div>
+<div class="col-1 songNum">${index + 1}</div>
+<div class="col-2 albumImg gx-1"><img src="${albumImage}" /></div>
+<div class="col-4 d-flex me-auto"><a href="#">${songTitle}</a></div>
+<div class="col-3 d-none d-md-block">${rank}</div>
+<div class="col-1 fs-6 heartIcon">♡</div>
+<div class="col-1">${duration}</div>`;
 
-      const albumDiv = document.createElement("div");
-      albumDiv.className = "album-info";
+      const songHTML = document.createElement("div");
+      songHTML.classList.add("row", "popularSongs", "align-items-center", "p-2", "track");
+      songHTML.innerHTML = template;
+      resultsContainer.appendChild(songHTML);
 
-      const imageElement = document.createElement("img");
-      imageElement.src = albumImage;
-      imageElement.alt = albumTitle;
-
-      const titleParagraph = document.createElement("p");
-      titleParagraph.textContent = `Album: ${albumTitle}`;
-
-      albumDiv.appendChild(imageElement);
-      albumDiv.appendChild(titleParagraph);
-
-      resultsContainer.appendChild(albumDiv);
+      songHTML.addEventListener("click", function (e) {
+        const previewUrl = e.target.dataset.preview;
+        const songTitle = e.target.dataset.songTitle;
+        const newUrl = `./index.html?preview=${encodeURIComponent(previewUrl)}&title=${encodeURIComponent(songTitle)}`;
+        window.location.href = newUrl;
+        const audioPlayer = document.getElementById("audio-player");
+        audioPlayer.querySelector(("#sourceSong".src = previewUrl));
+        audioPlayer.load();
+        audioPlayer.play();
+        // window.location.href = `./index.html`;
+      });
     });
   } else {
     console.error("Dati dell'artista non validi");
