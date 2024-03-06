@@ -1,8 +1,12 @@
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import "../assets/css/circular-font.css";
 @import "./color";
 
 body {
   background-color: black;
+  font-size: 12px;
+  color: $textColor;
+  /*  overflow-x: hidden */
 }
 
 .myBgGradient {
@@ -37,13 +41,36 @@ body {
     stroke: white;
   }
 }
+
+.asideRight {
+  color: $textColor;
+}
+
+#offcanvasBtn {
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: #343434;
+  }
+}
+
 #containerList {
   overflow-y: scroll;
-  height: 70vh;
+  height: 66vh;
 }
 
 ::-webkit-scrollbar {
   width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -52,7 +79,6 @@ body {
 
 #centralContainer {
   overflow-y: scroll;
-  max-height: 1;
   height: 97vh;
 }
 
@@ -221,4 +247,215 @@ i:hover {
 
 .volume-bar .progress {
   transition: width 0.2s ease;
+}
+/* ARTIST PAGE  */
+
+#centralSection {
+  overflow-y: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#artistHeader {
+  height: 35vh;
+  overflow: hidden;
+}
+
+.artistImgContainer {
+  height: 35vh;
+  overflow: hidden;
+}
+
+#artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: fixed;
+  height: 35vh;
+  z-index: -1;
+}
+
+.artistInfo {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+}
+
+.artistName {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 2.5vh;
+  margin-top: -2vh;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 992px) {
+  .artistName {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2vh;
+    margin-top: -2vh;
+    font-weight: 900;
+  }
+}
+
+.subtitles {
+  font-family: "Circular";
+  font-size: 1rem;
+  vertical-align: middle;
+  color: white;
+}
+
+#artistContent {
+  color: $textColor;
+}
+
+.followingBtn {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-family: "Circular";
+  font-size: 0.6rem;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: black;
+    transition: 0.5s;
+  }
+}
+
+.albumImg img {
+  max-width: 40px;
+  border-radius: 5px;
+}
+
+.popularSongs {
+  font-size: 12px;
+  color: $textColor;
+  &:hover {
+    color: white;
+    background-color: #232323;
+    border-radius: 5px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.heartIcon {
+  opacity: 0;
+}
+
+.popularSongs:hover .heartIcon {
+  opacity: 1;
+}
+
+.popularSongs:hover .songNum {
+  display: none;
+}
+.songPlay {
+  display: none;
+}
+.popularSongs:hover .songPlay {
+  display: block;
+}
+
+.likedSongs {
+  font-size: 12px;
+}
+
+.myBgGradient2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(4deg, rgba(0, 0, 0, 1) 50%, rgba(8, 37, 79, 1) 100%);
+}
+
+.showMore a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Circular";
+  color: $textColor;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.discBtn {
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: #343434;
+  }
+
+  &.firstDiscBtn {
+    background-color: #ffffff;
+    color: #2a2a2a;
+  }
+}
+
+.discCards {
+  padding: 10px;
+  border-radius: 15px;
+  &:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+.discCovers {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 8px 25px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.playButton {
+  background-color: rgb(54, 230, 0);
+  color: black;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.6s ease, trasform 0.8s ease;
+}
+
+.discCards:hover .playButton {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.infoImgContainer {
+  overflow: hidden;
+  width: 90%;
+  padding: 0;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+.infoImgContainer img {
+  object-fit: cover;
+  width: 100%;
 }
