@@ -244,11 +244,10 @@ body {
 }
 
 .discCards {
-  
   padding: 10px;
   border-radius: 15px;
   &:hover {
-    background-color: #1A1A1A;
+    background-color: #1a1a1a;
   }
 }
 
@@ -258,7 +257,6 @@ body {
   box-shadow: 2px 8px 25px 0px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-
 
 .playButton {
   background-color: rgb(54, 230, 0);
@@ -282,3 +280,17 @@ body {
   opacity: 1;
   transform: translateY(-10px);
 }
+
+.infoImgContainer {
+  overflow: hidden;
+  width: 90%;
+  padding: 0;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+.infoImgContainer img {
+  object-fit: cover;
+  width: 100%;
+}
+

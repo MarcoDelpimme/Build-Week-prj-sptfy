@@ -238,7 +238,7 @@ body {
   border-radius: 15px;
 }
 .discCards:hover {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 
 .discCovers {
@@ -269,6 +269,19 @@ body {
 .discCards:hover .playButton {
   opacity: 1;
   transform: translateY(-10px);
+}
+
+.infoImgContainer {
+  overflow: hidden;
+  width: 90%;
+  padding: 0;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+.infoImgContainer img {
+  object-fit: cover;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
