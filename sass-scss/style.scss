@@ -459,3 +459,34 @@ i:hover {
   object-fit: cover;
   width: 100%;
 }
+
+#btn1 {
+  background-color: $btn-green;
+}
+
+#allCardBuonasera {
+  background-color: $myGrey;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+    stroke: white;
+  }
+}
+
+#darker {
+  background-color: $myGrey;
+  color: $textColor;
+}
+#altrodiciòchetipiace {
+  margin-top: 2rem;
+}
+
+#greetings {
+  margin-top: 2rem;
+}
+#buttons {
+  margin-top: 5rem;
+}
