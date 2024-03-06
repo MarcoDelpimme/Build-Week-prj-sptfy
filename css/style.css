@@ -1,6 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fontsCircularStd.otf") format("opentype");
+}
 body {
   background-color: black;
+  font-family: "CircularStd", sans-serif;
 }
 
 .myBgGradient {
@@ -84,6 +89,16 @@ body {
 
 #buttons {
   margin-top: 5rem;
+}
+
+.card-title {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

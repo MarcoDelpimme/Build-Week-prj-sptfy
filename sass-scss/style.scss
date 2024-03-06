@@ -1,7 +1,15 @@
 @import "./color";
 
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("#{$font-path}CircularStd.otf") format("opentype");
+}
+
 body {
   background-color: black;
+  font-family: "CircularStd", sans-serif;
 }
 
 .myBgGradient {
@@ -84,4 +92,13 @@ body {
 }
 #buttons {
   margin-top: 5rem;
+}
+.card-title {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 14px;
 }
