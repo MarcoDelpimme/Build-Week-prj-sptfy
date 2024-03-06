@@ -38,7 +38,7 @@
           if (response.ok) {
             return response.json();
           } else {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`errore pay att!: ${response.status}`);
           }
         })
         .then((artistData) => {
@@ -61,7 +61,7 @@
         console.log("Albums:", albums);
 
         albums.forEach((album) => {
-          const albumTitle = album.title;
+          const albumTitle = album.album.title;
           const albumImage = album.album.cover_medium;
           const tracks = album.album.tracklist;
 
