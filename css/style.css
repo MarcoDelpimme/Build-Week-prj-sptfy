@@ -34,6 +34,17 @@
   font-weight: 900;
 }
 
+#hover-scale:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .albumName {
+    font-size: 2rem;
+    margin-bottom: 2vh;
+  }
+}
 body {
   background-color: black;
 }

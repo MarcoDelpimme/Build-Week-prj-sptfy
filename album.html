@@ -211,10 +211,12 @@
             
 
 
-            <div id="albumHeader" class="d-flex position-relative">   
+            <!-- <div id="albumHeader" class="d-flex position-relative">   
               
               <div class="albumInfo ms-2 d-flex flex-row align-items-center">
-                <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer" style="max-width:240px; align-self: flex-start;"/>
+                
+                  <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer" style="max-width:240px; align-self: flex-start;"/>
+                
 
                 <div class="flex-column ms-3 mt-5 pt-5">
                   <p class="bodyText gap-1">Album</p>
@@ -222,6 +224,22 @@
                   <p class="bodyText"><img src="/assets/imgs/main/image-1.jpg" alt="logo artista" class="rounded-pill border border-light" style="max-width:24px;">Pinguini Tattici Nucleari - 2017 - 12 Brani, 53 minuti 20 sec.</p>
                 </div>
 
+              </div>
+            </div> -->
+
+            <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative">
+              <div class="albumInfo ms-2 d-flex flex-column flex-md-row align-items-md-center">
+                <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer mb-3 mb-md-0" style="max-width:240px; align-self: flex-start;"/>
+            
+                <div class="flex-column ms-md-3">
+                  <div class="mb-3 mb-md-0">
+                    <p class="bodyText gap-1">Album</p>
+                    <p class="albumName text-md">Nome Album</p>
+                  </div>
+                  <div>
+                    <p class="bodyText"><img src="/assets/imgs/main/image-1.jpg" alt="logo artista" class="rounded-pill border border-light" style="max-width:24px;"><span class="mx-2">Pinguini Tattici Nucleari - 2017 - 12 Brani, 53 minuti 20 sec.</span></p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -233,6 +251,7 @@
               <div class="row ms-3 py-4 align-items-center">
                 <div class="col" style="flex: 0">
                   <svg
+                    id="hover-scale"
                     viewBox="0 0 16 16"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +300,7 @@
                 </div>
               </div>
 
-              <!-- START OF POPULAR AND LIKED SONGS -->
+              <!-- START OF ALBUM SONGS-->
               <div class="row d-flex px-4">
                 <div class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3">
                   <div class="container">
