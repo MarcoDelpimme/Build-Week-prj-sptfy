@@ -78,4 +78,396 @@ body {
   height: 97vh;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "circular std book", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  font-size: 14px;
+}
+
+.music-player {
+  --primary-color: #ddd;
+  --secondary-color: #999;
+  --green-color: #2d5;
+  --padding: 1em;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 7rem;
+  padding: var(--padding);
+  color: var(--primary-color);
+}
+
+i {
+  color: var(--secondary-color);
+}
+
+i:hover {
+  color: var(--primary-color);
+}
+
+.song-bar {
+  position: absolute;
+  left: var(--padding);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 25%;
+}
+
+.song-infos {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.image-container {
+  --size: 4.5em;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.song-description p {
+  margin: 0.2em;
+}
+
+.title,
+.artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.title:hover,
+.artist:hover {
+  text-decoration: underline;
+}
+
+.artist {
+  color: var(--secondary-color);
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+}
+
+.progress-controller {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  color: var(--secondary-color);
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.play-pause {
+  display: inline-block;
+  padding: 1em;
+  background-color: var(--primary-color);
+  color: #111;
+  border-radius: 50%;
+}
+
+.play-pause:hover {
+  transform: scale(1.1);
+  color: #111;
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: rgba(204, 204, 204, 0.2666666667);
+}
+
+.progress {
+  position: relative;
+  height: 100%;
+  width: 0; /*Da tenere d'occhio */
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+.progress-bar:hover .progress {
+  background-color: var(--green-color);
+}
+
+.progress-bar:hover .progress::after {
+  content: "";
+  position: absolute;
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translate(50%, calc(2px - 50%));
+}
+
+.other-features {
+  position: absolute;
+  right: var(--padding);
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.volume-bar .progress-bar {
+  width: 6em;
+}
+
+.volume-bar .progress-bar:hover .progress::after {
+  --size: 0.8em;
+  content: "";
+}
+
+.volume-bar .progress {
+  transition: width 0.2s ease;
+}
+
+/* ARTIST PAGE  */
+#centralSection {
+  overflow-y: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#artistHeader {
+  height: 35vh;
+  overflow: hidden;
+}
+
+.artistImgContainer {
+  height: 35vh;
+  overflow: hidden;
+}
+
+#artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: fixed;
+  height: 35vh;
+  z-index: -1;
+}
+
+.artistInfo {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+}
+
+.artistName {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 2.5vh;
+  margin-top: -2vh;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 992px) {
+  .artistName {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2vh;
+    margin-top: -2vh;
+    font-weight: 900;
+  }
+}
+.subtitles {
+  font-family: "Circular";
+  font-size: 1rem;
+  vertical-align: middle;
+  color: white;
+}
+
+#artistContent {
+  color: #777777;
+}
+
+.followingBtn {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-family: "Circular";
+  font-size: 0.6rem;
+  padding: 5px 10px;
+}
+.followingBtn:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.albumImg img {
+  max-width: 40px;
+  border-radius: 5px;
+}
+
+.popularSongs {
+  font-size: 12px;
+  color: #777777;
+}
+.popularSongs:hover {
+  color: white;
+  background-color: #232323;
+  border-radius: 5px;
+}
+.popularSongs a {
+  text-decoration: none;
+  color: white;
+}
+.popularSongs a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.heartIcon {
+  opacity: 0;
+}
+
+.popularSongs:hover .heartIcon {
+  opacity: 1;
+}
+
+.popularSongs:hover .songNum {
+  display: none;
+}
+
+.songPlay {
+  display: none;
+}
+
+.popularSongs:hover .songPlay {
+  display: block;
+}
+
+.likedSongs {
+  font-size: 12px;
+}
+
+.myBgGradient2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(4deg, rgb(0, 0, 0) 50%, rgb(8, 37, 79) 100%);
+}
+
+.showMore a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Circular";
+  color: #777777;
+}
+.showMore a:hover {
+  color: white;
+}
+
+.discBtn {
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+.discBtn:hover {
+  background-color: #343434;
+}
+.discBtn.firstDiscBtn {
+  background-color: #ffffff;
+  color: #2a2a2a;
+}
+
+.discCards {
+  padding: 10px;
+  border-radius: 15px;
+}
+.discCards:hover {
+  background-color: #1a1a1a;
+}
+
+.discCovers {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 8px 25px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.playButton {
+  background-color: rgb(54, 230, 0);
+  color: black;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.6s ease, trasform 0.8s ease;
+}
+
+.discCards:hover .playButton {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.infoImgContainer {
+  overflow: hidden;
+  width: 90%;
+  padding: 0;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+.infoImgContainer img {
+  object-fit: cover;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
