@@ -281,7 +281,7 @@
                       <div class="d-flex align-items-center" id="rightnav">
                         <!-- button? -->
                         <div style="margin-right: 1rem" class="d-none d-lg-block">
-                          <button type="button" class="btn btn-outline-white text-light" style="border-radius: 20px">
+                          <button type="button" class="btn border-white text-light" style="border-radius: 20px">
                             Upgrade
                           </button>
                         </div>
@@ -342,7 +342,7 @@
                 <!-- navbar-top-heroalbumartista? -->
 
                 <!-- HERO ALBUM+ARTISTA -->
-                <div class="card mb-8 text-white myBgGradient border-0">
+                <div class="card mb-8 text-white myBgGradient border-0 d-none d-md-block d-lg-block">
                   <div class="row g-0">
                     <div class="col-4">
                       <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="music" />
@@ -523,7 +523,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -535,7 +534,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -547,7 +545,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -559,7 +556,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -571,7 +567,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -583,7 +578,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -595,7 +589,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -607,7 +600,6 @@
                             <h5 class="card-title">Card title</h5>
                             <div class="d-flex align-items-baseline justify-content-between">
                               <p class="card-text">Chill lofi hip-hop mix.</p>
-                              <i class="fa-solid fa-play 2-xl"></i>
                             </div>
                           </div>
                         </div>
@@ -683,60 +675,6 @@
       </div>
     </main>
     <!-- END_MAIN -->
-
-    <!-- BEGIN_FOOTER -->
-    <footer class="position-absolute bottom-0" style="width: 100%">
-      <div class="music-player">
-        <div class="song-bar">
-          <div class="song-infos">
-            <div class="image-container">
-              <img src="./assets/imgs/main/image-12.jpg" alt="" />
-            </div>
-            <div class="song-description">
-              <p class="title">titolo</p>
-              <p class="artist">artista</p>
-            </div>
-          </div>
-          <div class="icons">
-            <i class="far fa-heart"></i>
-            <i class="fas fa-compress"></i>
-          </div>
-        </div>
-
-        <div class="progress-controller">
-          <div class="control-buttons">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
-            <i class="fas fa-step-forward"></i>
-            <i class="fas fa-undo-alt"></i>
-          </div>
-
-          <div class="progress-container">
-            <span id="current-time">0:00</span>
-            <div class="progress-bar">
-              <div class="progress" id="progress"></div>
-            </div>
-            <!-- da completare questo timer -->
-            <span id="duration">0:00</span>
-          </div>
-          <audio id="audio-player" preload="metadata">
-            <source src="" type="audio/mp3" />
-          </audio>
-        </div>
-        <div class="other-features">
-          <i class="fas fa-list-ul"></i>
-          <i class="fas fa-desktop"></i>
-          <div class="volume-bar" id="volume-bar">
-            <i class="fas fa-volume-down"></i>
-            <div class="progress-bar" id="volume-bar">
-              <div class="progress" id="volume-progress"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
     <script>
