@@ -6,3 +6,25 @@ document.getElementById("searchForm").addEventListener("submit", function (event
   //encodeURIComponent lho usato per far si che se nel form vengano inseriti degli spazi o dei caratteri speciali essi vengano convertiti senza causa problemi durante il reindirazzamento
   window.location.href = `artistpage.html?artist=${encodeURIComponent(artistName)}`;
 });
+
+const getGreeting = (greetingPlaceholder) => {
+  const date = new Date();
+  const time = date.getHours();
+
+  if (time < 12) {
+    greetingPlaceholder.innerText = "Buongiorno";
+  } else if (time >= 12 && time < 18) {
+    greetingPlaceholder.innerText = "Buon Pomeriggio";
+  } else {
+    greetingPlaceholder.innerText = "Buonasera";
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const greetingPlaceholder = document.getElementById("greeting");
+  if (greetingPlaceholder) {
+    getGreeting(greetingPlaceholder);
+  } else {
+    console.error("Elemento 'greeting' non trovato");
+  }
+});
