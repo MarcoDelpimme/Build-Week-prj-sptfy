@@ -75,13 +75,15 @@ getAlbumsInfoByIds(shuffleAlbum).then((albumInfoArray) => {
     sugHTML.classList.add("col-4", "col-md-3", "col-lg-2", "discCards");
     const templateSug = `
   
-  <div class="discCovers border-radius rounded-circle">
-  <img src="${albumInfo.cover_medium}" class="img-fluid border-radius rounded-circle" />
-  </div>
-  <div class="discText">
-  <p class="subtitles mb-0 mt-2">${albumInfo.title}</p>
-  <p>Ultima uscita</p>
-  </div>
+    <a href="./album2.html?id=${albumInfo.id}">
+    <div class="discCovers border-radius rounded-circle">
+    <img src="${albumInfo.cover_medium}" class="img-fluid border-radius rounded-circle" />
+    </div>
+    <div class="discText">
+    <p class="subtitles mb-0 mt-2">${albumInfo.title}</p>
+    <p>Ultima uscita</p>
+    </div>
+<a/>
   `;
     sugHTML.innerHTML = templateSug;
     containerSugg.appendChild(sugHTML);
@@ -123,8 +125,6 @@ function displayResults(artistData) {
   const imgBg = document.getElementById("imgBg");
   const titlePageArtist = document.getElementById("artistTitle");
 
-  // let songHTML = "";
-
   if (artistData && artistData.data) {
     const albums = artistData.data;
 
@@ -139,26 +139,25 @@ function displayResults(artistData) {
       const songTitle = album.title;
       const previewSong = album.preview;
       const artist = album.artist.name;
-
       const albumImage = album.album.cover_medium;
       const rank = album.rank;
       const duration = album.duration + "s";
-      // const tracks = album.album.tracklist;
-
       const idAlbum = album.album.id;
 
       if (!displayedAlbumIds.includes(idAlbum)) {
         displayedAlbumIds.push(idAlbum);
         const templateDisco = `
   
-  <div class="discCovers">
-  <img src="${albumImage}" class="img-fluid" />
-  </div>
-  
-  <div class="discText">
-  <p class="subtitles mb-0 mt-2">${albumTitle}</p>
-  <p>Ultima uscita</p>
-  </div>`;
+  <a href="./album2.html?id=${idAlbum}">
+    <div class="discCovers">
+    <img src="${albumImage}" class="img-fluid" />
+    </div>
+    
+    <div class="discText">
+    <p class="subtitles mb-0 mt-2">${albumTitle}</p>
+    <p>Ultima uscita</p>
+    </div>
+  </a>`;
 
         const discoHTML = document.createElement("div");
         discoHTML.classList.add("col-4", "col-md-3", "col-lg-2", "discCards");
@@ -198,7 +197,6 @@ function displayResults(artistData) {
         sourceSong.src = previewUrl;
         audioPlayer.load();
         audioPlayer.play();
-        // window.location.href = `./index.html`;
       });
     });
   } else {
