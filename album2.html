@@ -12,14 +12,6 @@
     <link href="LINK FONTS GOOGLE" rel="stylesheet" />
 
     <!-- FONTAWESOME 5.15.4 -->
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -27,22 +19,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- BOOTSTRAP -->
 
     <!-- WEBPAGE_NAME -->
-    <title>TITOLO</title>
+    <title>Album Page</title>
   </head>
   <body>
     <!-- BEGIN_MAIN -->
     <main>
       <div class="container-fluid">
         <div class="row align-content-center">
-
-         <!--  START LEFT ASIDE -->
-          <div class="d-none d-md-block col-md-3 asideBgColor textColor ps-4">
+          <div class="col-3 asideBgColor textColor ps-4">
             <div class="container">
               <a href="#" style="text-decoration: none">
                 <div class="col-12 my-3" id="leftColumn">
@@ -114,6 +111,26 @@
                     <span class="ps-1">Your Library</span>
                   </div>
                 </a>
+              </div>
+
+              <div class="col-12">
+                <form id="searchForm">
+                  <label for="artistName">Artista:</label>
+                  <input type="text" id="artistName" name="artistName" required />
+                  <button type="submit">Cerca</button>
+                </form>
+              </div>
+
+              <div class="col-12">
+                <button
+                  type="button"
+                  id="offcanvasBtn"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  Enable both scrolling & backdrop
+                </button>
               </div>
               <!-- HOME SEARCH LIBRARY END -->
 
@@ -215,165 +232,46 @@
           <!-- UL END -->
 
           <!-- CENTRAL SECTION  -->
-          <div class="col-12 col-md-9 p-0" id="centralSection">
 
+          <div class="col-9">
+            <!--  HEADER OF ALBUM PAGE -->
 
+            <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative"></div>
 
-                       <!-- navbar-top-heroalbumartista? -->
-                       <div class="col-12 position-sticky top-0 py-3 asideBgColor" style="z-index: 99">
-                        <nav>
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex">
-                              <!-- vuoto?? -->
-                              <svg
-                                id="leftColumn"
-                                width="40px"
-                                height="40px"
-                                viewBox="-6 -6 36.00 36.00"
-                                fill="#ffffff"
-                                xmlns="http://www.w3.org/2000/svg"
-                                stroke="#121212"
-                                stroke-width="0.696"
-                              >
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                  <path
-                                    d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
-                                    fill="#121212"
-                                  ></path>
-                                </g>
-                              </svg>
-                              <svg
-                                id="leftColumn"
-                                width="40px"
-                                height="40px"
-                                viewBox="-6 -6 36.00 36.00"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                stroke="#121212"
-                                stroke-width="0.696"
-                                transform="matrix(-1, 0, 0, 1, 0, 0)"
-                              >
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                  <path
-                                    d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
-                                    fill="#121212"
-                                  ></path>
-                                </g>
-                              </svg>
-                            </div>
-      
-                            <div class="d-flex align-items-center" id="rightnav">
-                              <!-- button? -->
-                              <div style="margin-right: 1rem" class="d-none d-lg-block">
-                                <button type="button" class="btn border-white text-light" style="border-radius: 20px">
-                                  Upgrade
-                                </button>
-                              </div>
-      
-                              <div
-                                class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap d-lg-none d-sm-block d-md-block d-xs-block"
-                                id="leftColumn"
-                              >
-                                <form id="searchForm">
-                                  <button
-                                    type="submit"
-                                    style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
-                                  >
-                                    <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                        d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
-                                        class="myIcon"
-                                      ></path>
-                                    </svg>
-                                  </button>
-      
-                                  <input
-                                    type="text"
-                                    id="artistName"
-                                    name="artistName"
-                                    placeholder="Search"
-                                    required
-                                    style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
-                                  />
-                                </form>
-                              </div>
-                              <!-- button? -->
-                              <!-- drop-downm? -->
-                              <div class="dropdown d-none d-lg-block">
-                                <button
-                                  class="btn btn-dark dropdown-toggle"
-                                  type="button"
-                                  id="dropdownMenuButton1"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  style="border-radius: 25px"
-                                >
-                                  <img
-                                    src="https://i.pinimg.com/564x/08/35/96/083596835424340eda90439fd20e5ee9.jpg"
-                                    style="width: 30px; height: 30px; border-radius: 50%"
-                                  />
-                                  Lidia Nautilus...
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="/Login/login.html">Log out</a></li>
-                                </ul>
-                              </div>
-                              <!-- drop-downm? -->
-                            </div>
-                          </div>
-                        </nav>
-                      </div>
-                      <!-- navbar-top-heroalbumartista? -->
+            <!-- START BODY OF ALBUM PAGE  -->
 
-            <!--  HEADER OF ARTIST PAGE -->
-            <div id="artistHeader" class="position-relative">
-              <div class="artistImgContainer">
-                <img id="imgBg" src="" />
-              </div>
-
-              <div class="artistInfo">
-                <button
-                  type="button"
-                  id="offcanvasBtn"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
-                >
-                  Enable both scrolling & backdrop
-                </button>
-
-                <p class="subtitles d-flex align-items-center gap-1">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20px">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M9.5924 3.20027C9.34888 3.4078 9.22711 3.51158 9.09706 3.59874C8.79896 3.79854 8.46417 3.93721 8.1121 4.00672C7.95851 4.03705 7.79903 4.04977 7.48008 4.07522C6.6787 4.13918 6.278 4.17115 5.94371 4.28923C5.17051 4.56233 4.56233 5.17051 4.28923 5.94371C4.17115 6.278 4.13918 6.6787 4.07522 7.48008C4.04977 7.79903 4.03705 7.95851 4.00672 8.1121C3.93721 8.46417 3.79854 8.79896 3.59874 9.09706C3.51158 9.22711 3.40781 9.34887 3.20027 9.5924C2.67883 10.2043 2.4181 10.5102 2.26522 10.8301C1.91159 11.57 1.91159 12.43 2.26522 13.1699C2.41811 13.4898 2.67883 13.7957 3.20027 14.4076C3.40778 14.6511 3.51158 14.7729 3.59874 14.9029C3.79854 15.201 3.93721 15.5358 4.00672 15.8879C4.03705 16.0415 4.04977 16.201 4.07522 16.5199C4.13918 17.3213 4.17115 17.722 4.28923 18.0563C4.56233 18.8295 5.17051 19.4377 5.94371 19.7108C6.278 19.8288 6.6787 19.8608 7.48008 19.9248C7.79903 19.9502 7.95851 19.963 8.1121 19.9933C8.46417 20.0628 8.79896 20.2015 9.09706 20.4013C9.22711 20.4884 9.34887 20.5922 9.5924 20.7997C10.2043 21.3212 10.5102 21.5819 10.8301 21.7348C11.57 22.0884 12.43 22.0884 13.1699 21.7348C13.4898 21.5819 13.7957 21.3212 14.4076 20.7997C14.6511 20.5922 14.7729 20.4884 14.9029 20.4013C15.201 20.2015 15.5358 20.0628 15.8879 19.9933C16.0415 19.963 16.201 19.9502 16.5199 19.9248C17.3213 19.8608 17.722 19.8288 18.0563 19.7108C18.8295 19.4377 19.4377 18.8295 19.7108 18.0563C19.8288 17.722 19.8608 17.3213 19.9248 16.5199C19.9502 16.201 19.963 16.0415 19.9933 15.8879C20.0628 15.5358 20.2015 15.201 20.4013 14.9029C20.4884 14.7729 20.5922 14.6511 20.7997 14.4076C21.3212 13.7957 21.5819 13.4898 21.7348 13.1699C22.0884 12.43 22.0884 11.57 21.7348 10.8301C21.5819 10.5102 21.3212 10.2043 20.7997 9.5924C20.5922 9.34887 20.4884 9.22711 20.4013 9.09706C20.2015 8.79896 20.0628 8.46417 19.9933 8.1121C19.963 7.95851 19.9502 7.79903 19.9248 7.48008C19.8608 6.6787 19.8288 6.278 19.7108 5.94371C19.4377 5.17051 18.8295 4.56233 18.0563 4.28923C17.722 4.17115 17.3213 4.13918 16.5199 4.07522C16.201 4.04977 16.0415 4.03705 15.8879 4.00672C15.5358 3.93721 15.201 3.79854 14.9029 3.59874C14.7729 3.51158 14.6511 3.40781 14.4076 3.20027C13.7957 2.67883 13.4898 2.41811 13.1699 2.26522C12.43 1.91159 11.57 1.91159 10.8301 2.26522C10.5102 2.4181 10.2043 2.67883 9.5924 3.20027ZM16.3735 9.86314C16.6913 9.5453 16.6913 9.03 16.3735 8.71216C16.0557 8.39433 15.5403 8.39433 15.2225 8.71216L10.3723 13.5624L8.77746 11.9676C8.45963 11.6498 7.94432 11.6498 7.62649 11.9676C7.30866 12.2854 7.30866 12.8007 7.62649 13.1186L9.79678 15.2889C10.1146 15.6067 10.6299 15.6067 10.9478 15.2889L16.3735 9.86314Z"
-                        fill="#3D91F4"
-                      ></path>
-                    </g>
-                  </svg>
-                  Artista verificato
-                </p>
-                <p id="artistTitle">Nome Artista</p>
-                <p class="subtitles">3.000.000 ascoltatori mensili</p>
-              </div>
-            </div>
-
-            <!-- START BODY OF ARTIST CONTENT -->
-
-            <div id="artistContent" class="myBgGradient2">
+            <div id="albumContent" class="myBgGradient">
               <!-- START FIRST ROW -->
 
               <div class="row ms-3 py-4 align-items-center">
-                <div class="col" style="flex: 0">
+                <div class="d-md-none order-md-first order-last" style="flex: 0">
                   <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="col order-md-first order-last me-2" style="flex: 0">
+                  <svg
+                    id="hover-scale"
                     viewBox="0 0 16 16"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -392,7 +290,48 @@
                   </svg>
                 </div>
 
-                <div class="col" style="flex: 0"><button type="button" class="followingBtn">FOLLOWING</button></div>
+                <div class="col" style="flex: 0" id="leftColumn">
+                  <svg
+                    class="text-white-50"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="-9.43 -9.43 490.56 490.56"
+                    xml:space="preserve"
+                    stroke-width="8.490618000000001"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="col" style="flex: 0" id="leftColumn">
+                  <svg width="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="#CCCCCC"
+                      stroke-width="0.096"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Arrow / Arrow_Circle_Down">
+                        <path
+                          id="Vector"
+                          d="M9 13L12 16M12 16L15 13M12 16V8M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
 
                 <div class="col" id="leftColumn">
                   <a href="#" style="text-decoration: none">
@@ -415,123 +354,52 @@
                 </div>
               </div>
 
-              <!-- START OF POPULAR AND LIKED SONGS -->
-              <div class="row px-3">
-                <div class="col-12 col-xl-8 mb-4" id="containerSongs">
-                  <p class="subtitles">Popolari</p>
-
-                  <!-- FIRST ITEM  -->
-                  <!-- generiamola dinamicamente -->
-
-                  <!-- generiamola dinamicamente -->
-
-                  <!-- SHOW MORE -->
-
-                  <div class="row showMore mt-2">
-                    <div class="col-12">
-                      <a href="#">Visualizza altro</a>
+              <!-- START OF ALBUM SONGS-->
+              <div class="row d-flex px-4">
+                <div
+                  class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-none d-sm-none d-lg-block"
+                >
+                  <div class="container">
+                    <div class="row d-flex justify-content-between text-white-50">
+                      <div class="col-1 text-center">#</div>
+                      <div class="col-6 text-start">
+                        <p>TITOLO</p>
+                      </div>
+                      <div class="col-2 text-center">Riproduzioni</div>
+                      <div class="col-3 text-end">
+                        <svg
+                          width="25px"
+                          height="25px"
+                          viewBox="0 0 24.00 24.00"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                              stroke="#ffffff"
+                              stroke-width="1.9200000000000004"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- LIKED SONGS -->
-
-                <div class="col likedSongs">
-                  <p class="subtitles">Brani che ti piacciono</p>
-
-                  <div class="row align-items-center gap-2 mb-3">
-                    <div class="col-3 d-flex align-items-center">
-                      <img
-                        class="rounded-circle img-fluid"
-                        src="assets/imgs/main/image-15.jpg"
-                        style="max-width: 50px"
-                      />
-                    </div>
-                    <div class="col-8 me-auto d-flex flex-column justify-content-center">
-                      <span class="text-white">Hai messo mi piace a 11 brani</span>
-                      <span>Di Yellowcard</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- END OF FIRST POPULAR AND LIKED  -->
-
-              <!--  START OF DISCOGRAPHY -->
-
-              <div class="row mt-3 px-3">
-                <div class="col-8 subtitles">Discography</div>
-                <div class="col showMore d-flex justify-content-end"><a href="#">Show more</a></div>
-              </div>
-
-              <!-- BUTTONS -->
-              <div class="row ms-3 mt-2">
-                <div class="col">
-                  <a href="#"><button class="discBtn firstDiscBtn">Popular releases</button></a>
-                  <a href="#"><button class="discBtn">Albums</button></a>
-                  <a href="#"><button class="discBtn">Singles & EP</button></a>
-                </div>
-              </div>
-
-              <!-- DISCOGRAPHY ALBUM CARDS -->
-
-              <div class="row mt-3 px-4" id="containerDisco"></div>
-              <!--  END OF CARDS -->
-
-              <!-- START OF SUGGESTED -->
-
-              <div class="row mt-4 px-3">
-                <div class="col-8 subtitles">You might also like</div>
-                <div class="col showMore d-flex justify-content-end"><a href="#">Show more</a></div>
-              </div>
-
-              <div class="row mt-3 px-3" id="containerSuggested">
-                <!-- FIRST OF SUGGESTED ALBUM  -->
-
-                <!-- SECOND OF SUGGESTED ALBUM  -->
-
-                <!-- THIRD OF SUGGESTED ALBUM  -->
-
-                <!-- FOURTH OF SUGGESTED ALBUM  -->
-
-                <!-- FIFTH OF SUGGESTED ALBUM  -->
-
-                <!-- SIXTH OF SUGGESTED ALBUM  -->
-              </div>
-
-              <!-- END OF SUGGESTED AREA -->
-
-              <!-- START OF INFO IMAGE  -->
-
-              <div class="row mt-4 px-3">
-                <div class="col-8 subtitles">More about them</div>
-              </div>
-
-              <div class="row mt-3 px-3">
-                <div class="infoImgContainer">
-                  <img
-                    src="https://images.squarespace-cdn.com/content/v1/551ab60fe4b0e8322a95768d/d420d584-3607-4bdb-8e2c-37af40eaf4d7/TheCraneWives-Sunfire-2022-GROUP-COLOR-127.jpg"
-                  />
-                </div>
-              </div>
-
-              <!-- END OF ARTIST CONTENT -->
-            </div>
-
-            <!-- START OF ARTIST  PAGE FOOTER -->
-            <div id="footer">
-              <div class="row">
-                <div class="col">Prima colonna</div>
-                <div class="col">Seconda colonna</div>
-                <div class="col">Terza colonna</div>
-                <div class="col">Quarta colonna</div>
+                <div id="containerSongsAlbum"></div>
               </div>
             </div>
           </div>
+          <!-- top post end -->
 
           <!-- CENTRAL SECTION END -->
 
-          <!-- RIGHT ASIDE START  -->
+          <!-- ASIDE CONTENT -->
           <div
             class="offcanvas offcanvas-end bg-black"
             data-bs-scroll="true"
@@ -586,7 +454,7 @@
               </div>
             </div>
           </div>
-          <!--  RIGHT ASIDE END -->
+          <!-- ASIDE CONTENT -->
         </div>
       </div>
     </main>
@@ -650,15 +518,6 @@
     <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="./assets/script/artistpage.js
-    "></script>
-
     <script>
       const audioPlayer = document.getElementById("audio-player");
       const progress = document.getElementById("progress");
@@ -706,6 +565,7 @@
       // progress.addEventListener("click", (event) => {
       //   clickBar(event);
       // });
+
       const pbar = document.querySelector(".progress-bar");
       pbar.addEventListener("click", (e) => {
         let widthbar2 = (e.offsetX / e.target.clientWidth) * audioPlayer.duration;
@@ -745,8 +605,14 @@
         return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
       }
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-    <script></script>
+    <script src="./assets/script/album.js"></script>
+
     <!-- END_SCRIPT -->
   </body>
 </html>
