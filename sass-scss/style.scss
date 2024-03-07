@@ -62,7 +62,7 @@ body {
 
 #containerList {
   overflow-y: scroll;
-  height: 66vh;
+  max-height: calc(100vh - 365px);
 }
 
 ::-webkit-scrollbar {

@@ -246,7 +246,7 @@
                   </svg>
                   Artista verificato
                 </p>
-                <p class="artistName">Nome Artista</p>
+                <p id="artistTitle">Nome Artista</p>
                 <p class="subtitles">3.000.000 ascoltatori mensili</p>
               </div>
             </div>
@@ -360,70 +360,70 @@
 
               <!-- DISCOGRAPHY ALBUM CARDS -->
 
-              <div class="row mt-3 px-4">
+              <div class="row mt-3 px-4" id="containerDisco">
                 <!--  FIRST ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 discCards">
                   <div class="discCovers">
-                    <img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" />
+                    <img src="" class="img-fluid" />
                     <div class="playButton">▶</div>
                   </div>
 
                   <div class="discText">
-                    <p class="subtitles mb-0 mt-2">The Well</p>
+                    <p class="subtitles mb-0 mt-2"></p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  SECOND ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 discCards">
                   <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
                   <div class="discText">
                     <p class="subtitles mb-0 mt-2">The Well</p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  THIRD ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 discCards">
                   <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
                   <div class="discText">
                     <p class="subtitles mb-0 mt-2">The Well</p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  FOURTH ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 d-none d-md-block discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 d-none d-md-block discCards">
                   <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
                   <div class="discText">
                     <p class="subtitles mb-0 mt-2">The Well</p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  FIFTH ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
                   <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
                   <div class="discText">
                     <p class="subtitles mb-0 mt-2">The Well</p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  SIXTH ALBUM -->
 
-                <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
+                <!-- <div class="col-4 col-md-3 col-lg-2 d-none d-lg-block discCards">
                   <div class="discCovers"><img src="./assets/imgs/search/image-13.jpeg" class="img-fluid" /></div>
                   <div class="discText">
                     <p class="subtitles mb-0 mt-2">The Well</p>
                     <p>Ultima uscita</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!--  END OF CARDS -->
               </div>
@@ -609,11 +609,11 @@
           <div class="song-bar">
             <div class="song-infos">
               <div class="image-container">
-                <img src="./assets/imgs/main/image-12.jpg" alt="" />
+                <img alt="" id="imgalbum" />
               </div>
               <div class="song-description">
-                <p class="title">titolo</p>
-                <p class="artist">artista</p>
+                <p class="title" id="titleaudio"></p>
+                <p class="artist" id="titleartist"></p>
               </div>
             </div>
             <div class="icons">
@@ -750,6 +750,8 @@
         return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
       }
     </script>
+
+    <script></script>
     <!-- END_SCRIPT -->
   </body>
 </html>
