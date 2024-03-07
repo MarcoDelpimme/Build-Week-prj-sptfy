@@ -265,12 +265,12 @@ i:hover {
 }
 
 #artistHeader {
-  height: 35vh;
+  height: 40%;
   overflow: hidden;
 }
 
 .artistImgContainer {
-  height: 35vh;
+  height: 40%;
   overflow: hidden;
 }
 
@@ -279,40 +279,35 @@ i:hover {
   object-fit: cover;
   opacity: 0.5;
   position: fixed;
-  height: 35vh;
   z-index: -1;
-  object-position: 0 -26rem;
 }
 
 .artistInfo {
   color: white;
   font-size: 20px;
   position: absolute;
-  bottom: 2vh;
-  left: 2vh;
+  bottom: 10px;
+  left: 30px;
 }
 
-.artistName {
+#artistTitle {
   font-size: 3.5rem;
-  line-height: 3.5rem;
-  margin-bottom: 2.5vh;
-  margin-top: -2vh;
   font-weight: 900;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 992px) {
-  .artistName {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    margin-bottom: 2vh;
-    margin-top: -2vh;
+  #artistTitle {
+    font-size: 3rem;
     font-weight: 900;
+    line-height: 2.5rem;
   }
 }
 
 .subtitles {
   font-family: "Circular";
-  font-size: 1rem;
+  font-size: 0.9rem;
   vertical-align: middle;
   color: white;
 }
