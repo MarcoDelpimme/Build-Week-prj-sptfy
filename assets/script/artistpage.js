@@ -7,10 +7,88 @@ document.addEventListener("DOMContentLoaded", function () {
   if (artistName) {
     searchDeezerArtist(artistName);
   } else {
-    console.error("Nome dell'artista non fornito nella query string");
+    console.error("Nome dell'artista non fornito ");
   }
 });
 
+// Funzione per ottenere album in modo randomico
+async function getAlbumInfo(albumId) {
+  const albumUrl = `https://deezerdevs-deezer.p.rapidapi.com/album/${albumId}`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "ce3a955d3dmsh2c1fe4098c8de2bp164eaajsn97005f1f60ae",
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(albumUrl, options);
+
+    if (!response.ok) {
+      throw new Error(`Errore: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    const albumInfo = {
+      id: data.id,
+      title: data.title,
+      cover_medium: data.cover_medium,
+      artist: data.artist.name,
+      tracks: data.tracks.data,
+    };
+    console.log(data);
+    return albumInfo;
+  } catch (errore) {
+    console.error(errore.message);
+    return null;
+  }
+}
+
+async function getAlbumsInfoByIds(albumIds) {
+  const albumInfoArray = [];
+
+  for (const albumId of albumIds) {
+    const albumInfo = await getAlbumInfo(albumId);
+    if (albumInfo) {
+      albumInfoArray.push(albumInfo);
+    }
+  }
+
+  return albumInfoArray;
+}
+
+const albumIds = [
+  595243, 75378, 122366, 382685427, 199146112, 7079242, 66768702, 253927, 212377, 9410100, 441697007, 239901952,
+  11611626, 373880, 73776,
+];
+
+const shuffleAlbum = albumIds.sort(() => Math.random() - 0.5).slice(0, 6);
+getAlbumsInfoByIds(shuffleAlbum).then((albumInfoArray) => {
+  console.log(albumInfoArray);
+
+  albumInfoArray.forEach((albumInfo) => {
+    const containerSugg = document.getElementById("containerSuggested");
+    const sugHTML = document.createElement("div");
+    sugHTML.classList.add("col-4", "col-md-3", "col-lg-2", "discCards");
+    const templateSug = `
+  
+  <div class="discCovers border-radius rounded-circle">
+  <img src="${albumInfo.cover_medium}" class="img-fluid border-radius rounded-circle" />
+  </div>
+  <div class="discText">
+  <p class="subtitles mb-0 mt-2">${albumInfo.title}</p>
+  <p>Ultima uscita</p>
+  </div>
+  `;
+    sugHTML.innerHTML = templateSug;
+    containerSugg.appendChild(sugHTML);
+  });
+});
+
+// FUNZIONE DEL FORM
 function searchDeezerArtist(artistName) {
   const artistUrl = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`;
 
@@ -21,31 +99,6 @@ function searchDeezerArtist(artistName) {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   };
-
-  // function randomAlbums() {
-  //   const randomAlbumUrl = "https://deezerdevs-deezer.p.rapidapi.com/chart/0";
-  //   const options = {
-  //     method: "GET",
-  //     headers: {
-  //       "X-RapidAPI-Key": "ce3a955d3dmsh2c1fe4098c8de2bp164eaajsn97005f1f60ae",
-  //       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  //     },
-  //   };
-  //   return fetch(randomAlbumUrl, options)
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         console.log(response);
-  //         return response.json();
-  //       } else {
-  //         throw new Error(`errore pay att!: ${response.status}`);
-  //       }
-  //     })
-  //     .then((data) => data.data)
-  //     .catch((errore) => {
-  //       console.error(errore);
-  //       return [];
-  //     });
-  // }
 
   fetch(artistUrl, options)
     .then((response) => {
@@ -62,12 +115,11 @@ function searchDeezerArtist(artistName) {
       console.error(error);
     });
 }
+// FUNZIONE DEL FORM
 
+// FUNZIONE DEL DISPLAYALBUM
 const displayedAlbumIds = [];
-
 function displayResults(artistData) {
-  console.log("Artist Data:", artistData);
-
   const imgBg = document.getElementById("imgBg");
   const titlePageArtist = document.getElementById("artistTitle");
 
@@ -75,9 +127,9 @@ function displayResults(artistData) {
 
   if (artistData && artistData.data) {
     const albums = artistData.data;
-    console.log("Albums:", albums);
-    imgBg.src = albums[0].artist.picture_xl;
-    titlePageArtist.innerText = albums[0].artist.name;
+
+    imgBg.src = albums[1].artist.picture_xl;
+    titlePageArtist.innerText = albums[1].artist.name;
 
     albums.forEach((album, index) => {
       const resultsContainer = document.getElementById("containerSongs");
@@ -153,3 +205,4 @@ function displayResults(artistData) {
     console.error("Dati dell'artista non validi");
   }
 }
+// FUNZIONE DEL DISPLAYALBUM
