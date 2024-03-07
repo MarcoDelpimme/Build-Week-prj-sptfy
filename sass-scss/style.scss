@@ -3,8 +3,16 @@
 @import "./color";
 @import "./album";
 
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("#{$font-path}CircularStd.otf") format("opentype");
+}
+
 body {
   background-color: black;
+
   font-size: 12px;
   color: $textColor;
   /*  overflow-x: hidden */
@@ -464,6 +472,15 @@ i:hover {
 
 #btn1 {
   background-color: $btn-green;
+  width: 20%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#btn2 {
+  width: 20%;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 #allCardBuonasera {
@@ -481,6 +498,12 @@ i:hover {
 #darker {
   background-color: $myGrey;
   color: $textColor;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+    stroke: white;
+  }
 }
 #altrodiciòchetipiace {
   margin-top: 2rem;
@@ -491,4 +514,20 @@ i:hover {
 }
 #buttons {
   margin-top: 5rem;
+}
+.card-title {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+#nascondi-annunci {
+  font-size: 9px;
+}
+#visualizza-tutto {
+  font-size: 11px;
+  color: $textColor;
 }
