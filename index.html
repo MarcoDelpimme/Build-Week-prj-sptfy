@@ -786,15 +786,21 @@
         }
       }
 
-      function clickBar(event) {
-        console.log("clicked bar");
-        const percent = (event.clientX / progress.clientWidth) * 100;
-        const clickBarTime = (percent / 100) * audioPlayer.duration;
-        audioPlayer.currentTime = clickBarTime;
-      }
+      // function clickBar(event) {
+      //   console.log("clicked bar");
+      //   const percent = (event.clientX / progress.clientWidth) * 100;
+      //   const clickBarTime = (percent / 100) * audioPlayer.duration;
+      //   audioPlayer.currentTime = clickBarTime;
+      // }
 
-      progress.addEventListener("click", (event) => {
-        clickBar(event);
+      // progress.addEventListener("click", (event) => {
+      //   clickBar(event);
+      // });
+
+      const pbar = document.querySelector(".progress-bar");
+      pbar.addEventListener("click", (e) => {
+        let widthbar2 = (e.offsetX / e.target.clientWidth) * audioPlayer.duration;
+        audioPlayer.currentTime = widthbar2;
       });
 
       audioPlayer.addEventListener("timeupdate", () => {

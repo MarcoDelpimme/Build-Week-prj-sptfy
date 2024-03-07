@@ -372,6 +372,8 @@
               </div>
             </div>
 
+            <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative"></div>
+
             <!-- START BODY OF ALBUM PAGE  -->
 
             <div id="albumContent" class="myBgGradient">
@@ -379,7 +381,28 @@
 
               <div class="row ms-3 py-4 align-items-center">
                 <div class="d-md-none order-md-first order-last" style="flex: 0">
-                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI" width="16" height="16"><path d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z" fill-opacity="0.7" fill="#FFFFFF"></path><path d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z" fill-opacity="0.7" fill="#FFFFFF"></path></svg>
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                  </svg>
                 </div>
 
                 <div class="col order-md-first order-last me-2" style="flex: 0">
@@ -404,13 +427,47 @@
                 </div>
 
                 <div class="col" style="flex: 0" id="leftColumn">
-                  <svg  class=" text-white-50" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-9.43 -9.43 490.56 490.56" xml:space="preserve" stroke-width="8.490618000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"></path> </g> </g></svg>                
+                  <svg
+                    class="text-white-50"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="-9.43 -9.43 490.56 490.56"
+                    xml:space="preserve"
+                    stroke-width="8.490618000000001"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-              
+
                 <div class="col" style="flex: 0" id="leftColumn">
-                  <svg width="28px"  viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.096"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Circle_Down"> <path id="Vector" d="M9 13L12 16M12 16L15 13M12 16V8M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z"></path> </g> </g></svg>                
+                  <svg width="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="#CCCCCC"
+                      stroke-width="0.096"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Arrow / Arrow_Circle_Down">
+                        <path
+                          id="Vector"
+                          d="M9 13L12 16M12 16L15 13M12 16V8M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-                
 
                 <div class="col" id="leftColumn">
                   <a href="#" style="text-decoration: none">
@@ -435,68 +492,42 @@
 
               <!-- START OF ALBUM SONGS-->
               <div class="row d-flex px-4">
-                <div class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-none d-sm-none d-lg-block">
+                <div
+                  class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-none d-sm-none d-lg-block"
+                >
                   <div class="container">
-
                     <div class="row d-flex justify-content-between text-white-50">
-                        <div class="col-1 text-center">#</div>
-                        <div class="col-6 text-start">
-                          <p>TITOLO</p>
-                        </div>
-                        <div class="col-2 text-center">Riproduzioni</div>
-                        <div class="col-3 text-end"><svg width="25px" height="25px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#ffffff" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
-                    </div>
-                  </div>
-                  
-                </div>
-
-                <div class="col-12 d-flex pb-3">
-                  <div class="container">
-                    <!-- Da integrare con JavaScript -->
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-1 text-center d-md-block d-none">1</div>
-                        <div class="col-6 text-start">
-                          <p class="m-0">Nome Canzone</p>
-                          <p class="text-white-50">Nome Artista</p>
-                        </div>
-                        <div class="col-2 text-center text-white-50 d-md-block d-none">403489</div>
-                        <div class="col-3 text-end text-white-50 d-md-block d-none">1:28</div>
-                        <div class="col-3 text-end text-white-50 d-lg-none d-block"><svg opacity="0.5" width="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-three-dots-vertical"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path> </g></svg></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 d-flex pb-3">
-                  <div class="container">
-                    <!-- Da integrare con JavaScript -->
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-1 text-center d-md-block d-none">1</div>
-                        <div class="col-6 text-start">
-                          <p class="m-0">Nome Canzone</p>
-                          <p class="text-white-50">Nome Artista</p>
-                        </div>
-                        <div class="col-2 text-center text-white-50 d-md-block d-none">403489</div>
-                        <div class="col-3 text-end text-white-50 d-md-block d-none">1:28</div>
-                        <div class="col-3 text-end text-white-50 d-lg-none d-block"><svg opacity="0.5" width="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-three-dots-vertical"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path> </g></svg></div>
+                      <div class="col-1 text-center">#</div>
+                      <div class="col-6 text-start">
+                        <p>TITOLO</p>
+                      </div>
+                      <div class="col-2 text-center">Riproduzioni</div>
+                      <div class="col-3 text-end">
+                        <svg
+                          width="25px"
+                          height="25px"
+                          viewBox="0 0 24.00 24.00"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                              stroke="#ffffff"
+                              stroke-width="1.9200000000000004"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-12 d-flex pb-3">
-                  <div class="container">
-                    <!-- Da integrare con JavaScript -->
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-1 text-center d-md-block d-none">1</div>
-                        <div class="col-6 text-start">
-                          <p class="m-0">Nome Canzone</p>
-                          <p class="text-white-50">Nome Artista</p>
-                        </div>
-                        <div class="col-2 text-center text-white-50 d-md-block d-none">403489</div>
-                        <div class="col-3 text-end text-white-50 d-md-block d-none">1:28</div>
-                        <div class="col-3 text-end text-white-50 d-lg-none d-block"><svg opacity="0.5" width="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-three-dots-vertical"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path> </g></svg></div>
-                    </div>
-                  </div>
-                </div>
+                <div id="containerSongsAlbum"></div>
               </div>
             </div>
           </div>
@@ -566,57 +597,60 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer class="position-absolute bottom-0" style="width: 100%">
-      <div class="music-player">
-        <div class="song-bar">
-          <div class="song-infos">
-            <div class="image-container">
-              <img src="./assets/imgs/main/image-12.jpg" alt="" />
+    <footer>
+      <footer class="position-absolute bottom-0" style="width: 100%">
+        <div class="music-player">
+          <div class="song-bar">
+            <div class="song-infos">
+              <div class="image-container">
+                <img alt="" id="imgalbum" />
+              </div>
+              <div class="song-description">
+                <p class="title" id="titleaudio"></p>
+                <p class="artist" id="titleartist"></p>
+              </div>
             </div>
-            <div class="song-description">
-              <p class="title">titolo</p>
-              <p class="artist">artista</p>
+            <div class="icons">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-compress"></i>
             </div>
-          </div>
-          <div class="icons">
-            <i class="far fa-heart"></i>
-            <i class="fas fa-compress"></i>
-          </div>
-        </div>
-
-        <div class="progress-controller">
-          <div class="control-buttons">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
-            <i class="fas fa-step-forward"></i>
-            <i class="fas fa-undo-alt"></i>
           </div>
 
-          <div class="progress-container">
-            <span id="current-time">0:00</span>
-            <div class="progress-bar">
-              <div class="progress" id="progress"></div>
+          <div class="progress-controller">
+            <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
             </div>
-            <!-- da completare questo timer -->
-            <span id="duration">0:00</span>
+
+            <div class="progress-container">
+              <span id="current-time">0:00</span>
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              <!-- da completare questo timer -->
+              <span id="duration">0:00</span>
+            </div>
+            <audio id="audio-player" preload="metadata">
+              <source src="" type="audio/mp3" id="sourceSong" />
+            </audio>
           </div>
-          <audio id="audio-player" preload="metadata">
-            <source src="" type="audio/mp3" />
-          </audio>
-        </div>
-        <div class="other-features">
-          <i class="fas fa-list-ul"></i>
-          <i class="fas fa-desktop"></i>
-          <div class="volume-bar" id="volume-bar">
-            <i class="fas fa-volume-down"></i>
-            <div class="progress-bar" id="volume-bar">
-              <div class="progress" id="volume-progress"></div>
+          <div class="other-features">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <div class="volume-bar" id="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar" id="volume-bar">
+                <div class="progress" id="volume-progress"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </footer>
+
     <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
@@ -657,15 +691,21 @@
         }
       }
 
-      function clickBar(event) {
-        console.log("clicked bar");
-        const percent = (event.clientX / progress.clientWidth) * 100;
-        const clickBarTime = (percent / 100) * audioPlayer.duration;
-        audioPlayer.currentTime = clickBarTime;
-      }
+      // function clickBar(event) {
+      //   console.log("clicked bar");
+      //   const percent = (event.clientX / progress.clientWidth) * 100;
+      //   const clickBarTime = (percent / 100) * audioPlayer.duration;
+      //   audioPlayer.currentTime = clickBarTime;
+      // }
 
-      progress.addEventListener("click", (event) => {
-        clickBar(event);
+      // progress.addEventListener("click", (event) => {
+      //   clickBar(event);
+      // });
+
+      const pbar = document.querySelector(".progress-bar");
+      pbar.addEventListener("click", (e) => {
+        let widthbar2 = (e.offsetX / e.target.clientWidth) * audioPlayer.duration;
+        audioPlayer.currentTime = widthbar2;
       });
 
       audioPlayer.addEventListener("timeupdate", () => {
@@ -707,7 +747,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./assets/script/index.js"></script>
+    <script src="./assets/script/album.js"></script>
 
     <!-- END_SCRIPT -->
   </body>
