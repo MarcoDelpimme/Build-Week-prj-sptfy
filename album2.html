@@ -39,7 +39,7 @@
     <main>
       <div class="container-fluid">
         <div class="row align-content-center">
-          <div class="col-3 asideBgColor textColor ps-4">
+          <div class="d-none d-md-block col-md-3 asideBgColor textColor ps-4">
             <div class="container">
               <a href="#" style="text-decoration: none">
                 <div class="col-12 my-3" id="leftColumn">
@@ -233,146 +233,117 @@
 
           <!-- CENTRAL SECTION  -->
 
-          <div class="col-9">
+          <div class="col-12 col-md-9 p-0" id="centralContainer">
             <!--  HEADER OF ALBUM PAGE -->
-            
             <div class="col-12 position-sticky top-0 py-3 asideBgColor" style="z-index: 99">
-                <nav>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div class="d-flex">
-                      <!-- vuoto?? -->
-                      <svg
-                        id="leftColumn"
-                        width="40px"
-                        height="40px"
-                        viewBox="-6 -6 36.00 36.00"
-                        fill="#ffffff"
-                        xmlns="http://www.w3.org/2000/svg"
-                        stroke="#121212"
-                        stroke-width="0.696"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
-                            fill="#121212"
-                          ></path>
-                        </g>
-                      </svg>
-                      <svg
-                        id="leftColumn"
-                        width="40px"
-                        height="40px"
-                        viewBox="-6 -6 36.00 36.00"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        stroke="#121212"
-                        stroke-width="0.696"
-                        transform="matrix(-1, 0, 0, 1, 0, 0)"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
-                            fill="#121212"
-                          ></path>
-                        </g>
-                      </svg>
+              <nav>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <!-- vuoto?? -->
+                    <svg
+                      id="leftColumn"
+                      width="40px"
+                      height="40px"
+                      viewBox="-6 -6 36.00 36.00"
+                      fill="#ffffff"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#121212"
+                      stroke-width="0.696"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
+                          fill="#121212"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      id="leftColumn"
+                      width="40px"
+                      height="40px"
+                      viewBox="-6 -6 36.00 36.00"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#121212"
+                      stroke-width="0.696"
+                      transform="matrix(-1, 0, 0, 1, 0, 0)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
+                          fill="#121212"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div class="d-flex align-items-center" id="rightnav">
+                    <!-- button? -->
+                    <div style="margin-right: 1rem" class="d-none d-lg-block">
+                      <button type="button" class="btn border-white text-light" style="border-radius: 20px">
+                        Upgrade
+                      </button>
                     </div>
 
-                    <div class="d-flex align-items-center" id="rightnav">
-                      <!-- button? -->
-                      <div style="margin-right: 1rem" class="d-none d-lg-block">
-                        <button type="button" class="btn border-white text-light" style="border-radius: 20px">
-                          Upgrade
-                        </button>
-                      </div>
-
-                      <div
-                        class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap d-lg-none d-sm-block d-md-block d-xs-block"
-                        id="leftColumn"
-                      >
-                        <form id="searchForm">
-                          <button
-                            type="submit"
-                            style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
-                          >
-                            <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
-                                class="myIcon"
-                              ></path>
-                            </svg>
-                          </button>
-
-                          <input
-                            type="text"
-                            id="artistName"
-                            name="artistName"
-                            placeholder="Search"
-                            required
-                            style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
-                          />
-                        </form>
-                      </div>
-                      <!-- button? -->
-                      <!-- drop-downm? -->
-                      <div class="dropdown d-none d-lg-block">
+                    <div
+                      class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap d-lg-none d-sm-block d-md-block d-xs-block"
+                      id="leftColumn"
+                    >
+                      <form id="searchForm">
                         <button
-                          class="btn btn-dark dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="border-radius: 25px"
+                          type="submit"
+                          style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
                         >
-                          <img
-                            src="https://i.pinimg.com/564x/08/35/96/083596835424340eda90439fd20e5ee9.jpg"
-                            style="width: 30px; height: 30px; border-radius: 50%"
-                          />
-                          Lidia Nautilus...
+                          <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                              class="myIcon"
+                            ></path>
+                          </svg>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="/Login/login.html">Log out</a></li>
-                        </ul>
-                      </div>
-                      <!-- drop-downm? -->
+
+                        <input
+                          type="text"
+                          id="artistName"
+                          name="artistName"
+                          placeholder="Search"
+                          required
+                          style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
+                        />
+                      </form>
                     </div>
+                    <!-- button? -->
+                    <!-- drop-downm? -->
+                    <div class="dropdown d-none d-lg-block">
+                      <button
+                        class="btn btn-dark dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="border-radius: 25px"
+                      >
+                        <img
+                          src="https://i.pinimg.com/564x/08/35/96/083596835424340eda90439fd20e5ee9.jpg"
+                          style="width: 30px; height: 30px; border-radius: 50%"
+                        />
+                        Lidia Nautilus...
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="/Login/login.html">Log out</a></li>
+                      </ul>
+                    </div>
+                    <!-- drop-downm? -->
                   </div>
-                </nav>
-              </div>
-
-
-
-
-
-
-            <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative">
-              <div class="albumInfo ms-2 d-flex flex-column flex-md-row align-items-md-center">
-                <img src="/assets/imgs/main/image-13.jpg" class="img-fluid albumImgContainer mb-3 mb-md-0" style="max-width:220px; align-self: flex-start;"/>
-            
-                <div class="flex-column ms-md-3">
-                  <div class="mb-3 mb-md-0">
-                    <p class="bodyText gap-1 d-md-block d-none">Album</p>
-                    <p class="albumName text-md">Nome Album</p>
-                  </div>
-                  
-                  <div class="d-flex flex-row-md">
-                        <p class="m-0"></p>
-                        <p class="px-1 m-0"><img src="/assets/imgs/main/image-1.jpg" alt="logo artista" class="rounded-pill border border-light me-2" style="max-width:24px;">Nome Artista</p>
-                        <p class="px-1 m-0 text-white-50">Anno Album</p>
-                        <p class="px-1 d-md-block d-none">N. brani</p>
-                        <p class="px-1 d-md-block d-none text-white-50">Durata Album</p>
-                  </div>
-                    
-                  
                 </div>
-              </div>
+              </nav>
             </div>
-
             <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative"></div>
+            
 
             <!-- START BODY OF ALBUM PAGE  -->
 
@@ -380,7 +351,7 @@
               <!-- START FIRST ROW -->
 
               <div class="row ms-3 py-4 align-items-center">
-                <div class="d-md-none order-md-first order-last" style="flex: 0">
+                <div class="d-md-sm-none order-md-sm-first order-last" style="flex: 0">
                   <svg
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +376,7 @@
                   </svg>
                 </div>
 
-                <div class="col order-md-first order-last me-2" style="flex: 0">
+                <div class="col order-md-sm-first order-last me-2" style="flex: 0">
                   <svg
                     id="hover-scale"
                     viewBox="0 0 16 16"
@@ -493,7 +464,7 @@
               <!-- START OF ALBUM SONGS-->
               <div class="row d-flex px-4">
                 <div
-                  class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-none d-sm-none d-lg-block"
+                  class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-sm-none d-none d-lg-block"
                 >
                   <div class="container">
                     <div class="row d-flex justify-content-between text-white-50">

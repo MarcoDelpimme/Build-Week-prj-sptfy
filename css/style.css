@@ -4,21 +4,27 @@
 #albumHeader {
   height: 35vh;
   overflow: hidden;
-  background: rgb(240, 207, 79);
-  background: linear-gradient(180deg, rgb(240, 207, 79) 22%, rgb(119, 102, 42) 100%);
+  background: linear-gradient(180deg, rgb(110, 19, 19) 22%, rgb(37, 0, 0) 100%);
 }
 
 #albumHeader img {
   width: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.7;
+  overflow-y: scroll;
+  max-height: 95vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #albumContent {
-  height: 65vh;
+  height: 48vh;
   color: white;
-  background: rgb(97, 83, 29);
-  background: linear-gradient(180deg, rgb(97, 83, 29) 0%, rgb(100, 89, 49) 11%, rgb(23, 23, 23) 32%);
+  background: linear-gradient(180deg, rgb(105, 33, 33) 0%, rgb(65, 9, 9) 11%, rgb(23, 23, 23) 32%);
+  overflow-y: scroll;
+  max-height: 95vh;
 }
 
 .albumInfo {
@@ -47,6 +53,16 @@
     margin-bottom: 2vh;
   }
 }
+@media (max-width: 767px) {
+  .col-9 {
+    width: 100% !important;
+  }
+}
+#centralContainer {
+  overflow-y: scroll;
+  height: 97vh;
+}
+
 @font-face {
   font-family: "CircularStd";
   src: url("../assets/fontsCircularStd.otf") format("opentype");
@@ -109,7 +125,7 @@ body {
 
 #containerList {
   overflow-y: scroll;
-  max-height: calc(100vh - 365px);
+  max-height: calc(91vh - 365px);
 }
 
 ::-webkit-scrollbar {
