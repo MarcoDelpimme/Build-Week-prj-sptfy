@@ -1,3 +1,23 @@
+// __________________________________________________________________________
+document.getElementById("searchForm3").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const artistName = document.getElementById("artistName3").value;
+
+  //encodeURIComponent lho usato per far si che se nel form vengano inseriti degli spazi o dei caratteri speciali essi vengano convertiti senza causa problemi durante il reindirazzamento
+  window.location.href = `artistpage.html?artist=${encodeURIComponent(artistName)}`;
+});
+
+document.getElementById("searchForm4").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const artistName = document.getElementById("artistName4").value;
+
+  //encodeURIComponent lho usato per far si che se nel form vengano inseriti degli spazi o dei caratteri speciali essi vengano convertiti senza causa problemi durante il reindirazzamento
+  window.location.href = `artistpage.html?artist=${encodeURIComponent(artistName)}`;
+});
+
+// ______________________________________________________________________________
 document.addEventListener("DOMContentLoaded", function () {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -124,7 +144,6 @@ const displayedAlbumIds = [];
 function displayResults(artistData) {
   const imgBg = document.getElementById("imgBg");
   const titlePageArtist = document.getElementById("artistTitle");
-  
 
   if (artistData && artistData.data) {
     const albums = artistData.data;
@@ -132,8 +151,8 @@ function displayResults(artistData) {
     imgBg.src = albums[1].artist.picture_xl;
     titlePageArtist.innerText = albums[1].artist.name;
     const viewers = document.getElementById("viewers");
-    viewers.innerText =  Math.floor(Math.random() * 30000000)+ " monthly listeners"
-    
+    viewers.innerText = Math.floor(Math.random() * 30000000) + " monthly listeners";
+
     albums.forEach((album, index) => {
       const resultsContainer = document.getElementById("containerSongs");
       const containerDisco = document.getElementById("containerDisco");
@@ -148,7 +167,6 @@ function displayResults(artistData) {
       const idAlbum = album.album.id;
       const type = album.album.type;
 
-      
       if (!displayedAlbumIds.includes(idAlbum)) {
         displayedAlbumIds.push(idAlbum);
         const templateDisco = `
