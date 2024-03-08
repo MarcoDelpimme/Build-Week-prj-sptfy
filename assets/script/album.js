@@ -1,3 +1,21 @@
+document.getElementById("searchForm5").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const artistName = document.getElementById("artistName5").value;
+
+  //encodeURIComponent lho usato per far si che se nel form vengano inseriti degli spazi o dei caratteri speciali essi vengano convertiti senza causa problemi durante il reindirazzamento
+  window.location.href = `artistpage.html?artist=${encodeURIComponent(artistName)}`;
+});
+
+document.getElementById("searchForm6").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const artistName = document.getElementById("artistName6").value;
+
+  //encodeURIComponent lho usato per far si che se nel form vengano inseriti degli spazi o dei caratteri speciali essi vengano convertiti senza causa problemi durante il reindirazzamento
+  window.location.href = `artistpage.html?artist=${encodeURIComponent(artistName)}`;
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
