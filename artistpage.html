@@ -233,6 +233,19 @@
               <nav>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="d-flex">
+
+                    <button
+                    type="button"
+                    id="offcanvasBtn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                    class="d-none d-md-block"
+                  >
+                    Active friends
+                  </button>
+
+
                     <!-- vuoto?? -->
                     <svg
                       id="leftColumn"
@@ -277,11 +290,7 @@
 
                   <div class="d-flex align-items-center" id="rightnav">
                     <!-- button? -->
-                    <div style="margin-right: 1rem" class="d-none d-lg-block">
-                      <button type="button" class="btn border-white text-light" style="border-radius: 20px">
-                        Upgrade
-                      </button>
-                    </div>
+              
 
                     <div
                       class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap d-lg-none d-sm-block d-md-block d-xs-block"
@@ -345,15 +354,7 @@
               </div>
 
               <div class="artistInfo">
-                <button
-                  type="button"
-                  id="offcanvasBtn"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
-                >
-                  Enable both scrolling & backdrop
-                </button>
+             
 
                 <p class="subtitles d-flex align-items-center gap-1">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20px">
@@ -426,26 +427,11 @@
 
               <!-- START OF POPULAR AND LIKED SONGS -->
               <div class="row px-3">
-                <div class="col-12 col-xl-8 mb-4" id="containerSongs">
-                  <p class="subtitles">Popolari</p>
-
-                  <!-- FIRST ITEM  -->
-                  <!-- generiamola dinamicamente -->
-
-                  <!-- generiamola dinamicamente -->
-
-                  <!-- SHOW MORE -->
-
-                  <div class="row showMore mt-2">
-                    <div class="col-12">
-                      <a href="#">Visualizza altro</a>
-                    </div>
-                  </div>
-                </div>
+                
 
                 <!-- LIKED SONGS -->
 
-                <div class="col likedSongs">
+                <div class="col order-sm-1 order-md-2 d-flex flex-column likedSongs">
                   <p class="subtitles">Brani che ti piacciono</p>
 
                   <div class="row align-items-center gap-2 mb-3">
@@ -462,6 +448,25 @@
                     </div>
                   </div>
                 </div>
+
+
+                <div class="col-12 col-xl-8 d-flex flex-column mb-4 order-sm-2 order-md-1" id="containerSongs">
+                  <p class="subtitles">Popular songs</p>
+
+                  <!-- FIRST ITEM  -->
+                  <!-- generiamola dinamicamente -->
+
+                  <!-- generiamola dinamicamente -->
+
+                  <!-- SHOW MORE -->
+
+                  <div class="row showMore mt-2">
+                    <div class="col-12">
+                      <a href="#">View More</a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
               <!-- END OF FIRST POPULAR AND LIKED  -->
@@ -564,38 +569,38 @@
 
                 <div class="row align-items-center mt-3">
                   <div class="col-2">
-                    <img src="./assets/imgs/main/image-13.jpg" alt="" width="40px" style="border-radius: 50%" />
+                    <img src="./assets/imgs/main/image-13.jpg" alt="" width="45px" style="border-radius: 50%" />
                   </div>
-                  <div class="col-7 fs-6">
+                  <div class="col-7">
                     <div class="col-12 fw-bold">Charlie Hookham</div>
                     <div class="col-12">In Camera • Yumi Zouma</div>
                     <div class="col-12">EP III</div>
                   </div>
                   <div class="col-3 fw-bold align-self-start">12 min</div>
-                    
-                  </div>
                 </div>
 
                 <div class="row align-items-center mt-3">
                   <div class="col-2">
-                    <img src="./assets/imgs/main/image-13.jpg" alt="" width="40px" style="border-radius: 50%" />
+                    <img src="./assets/imgs/main/image-12.jpg" alt="" width="45px" style="border-radius: 50%" />
                   </div>
-                  <div class="col-10">
-                    <div class="col-12 fw-bold">Charlie Hokman</div>
-                    <div class="col-12">charlieputh 13:14</div>
-                    <div class="col-12">ep. 196</div>
+                  <div class="col-7">
+                    <div class="col-12 fw-bold">lightdark02</div>
+                    <div class="col-12">Aimed to Kill • Jade LeMac</div>
+                    <div class="col-12">Aimed to Kill</div>
                   </div>
+                  <div class="col-3 fw-bold align-self-start">39 min</div>
                 </div>
 
                 <div class="row align-items-center mt-3">
                   <div class="col-2">
-                    <img src="./assets/imgs/main/image-13.jpg" alt="" width="40px" style="border-radius: 50%" />
+                    <img src="./assets/imgs/main/image-16.jpg" alt="" width="45px" style="border-radius: 50%" />
                   </div>
-                  <div class="col-10">
-                    <div class="col-12 fw-bold">Charlie Hokman</div>
-                    <div class="col-12">charlieputh 13:14</div>
-                    <div class="col-12">ep. 196</div>
+                  <div class="col-7">
+                    <div class="col-12 fw-bold">Valeria Traverso</div>
+                    <div class="col-12">New Kings • Sleeping Wolf</div>
+                    <div class="col-12">EP III</div>
                   </div>
+                  <div class="col-3 fw-bold align-self-start">40 min</div>
                 </div>
               </div>
             </div>

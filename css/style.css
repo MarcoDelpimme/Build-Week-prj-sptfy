@@ -95,15 +95,17 @@ body {
 
 #offcanvasBtn {
   border: none;
-  background-color: #2a2a2a;
-  color: white;
+  background-color: black;
+  border: 2px solid #2a2a2a;
+  color: #777777;
   font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin-right: 5px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin-inline: 5px;
 }
 #offcanvasBtn:hover {
   background-color: #343434;
+  color: white;
 }
 
 #containerList {
