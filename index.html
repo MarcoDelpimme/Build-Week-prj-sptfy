@@ -360,61 +360,10 @@
                 <!-- navbar-top-heroalbumartista? -->
 
                 <!-- HERO ALBUM+ARTISTA -->
-                <div class="card mb-8 text-white myBgGradient border-0 d-none d-md-block d-lg-block">
-                  <div class="row g-0">
-                    <div class="col-4">
-                      <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="music" />
-                    </div>
-                    <div class="col-8">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-8"><p>ALBUM</p></div>
-                          <div class="col-4">
-                            <button
-                              type="button"
-                              class="btn btn-sm rounded-pill btn-dark text-secondary"
-                              id="nascondi-annunci"
-                            >
-                              NASCONDI ANNUNCI
-                            </button>
-                          </div>
-                        </div>
-                        <div class="col-12"><h2 class="card-title fs-1">TITOLO CANZONE</h2></div>
-                        <div class="col-12"><p class="card-text">autore</p></div>
-
-                        <div class="col-12">
-                          <div class="row align-items-center column-gap-2" id="buttons">
-                            <button type="button" class="btn btn-lg rounded-pill col-4" id="btn1">Play</button
-                            ><button
-                              type="button"
-                              class="btn btn-dark btn-lg rounded-pill border border-white col-4"
-                              id="btn2"
-                            >
-                              Salva
-                            </button>
-                            <a href="" id="leftColumn" class="col-auto">
-                              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                  <path
-                                    d="M4 9.5C5.38071 9.5 6.5 10.6193 6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5Z"
-                                  ></path>
-                                  <path
-                                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
-                                  ></path>
-                                  <path
-                                    d="M22.5 12C22.5 10.6193 21.3807 9.5 20 9.5C18.6193 9.5 17.5 10.6193 17.5 12C17.5 13.3807 18.6193 14.5 20 14.5C21.3807 14.5 22.5 13.3807 22.5 12Z"
-                                  ></path>
-                                </g>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div
+                  class="card mb-8 text-white myBgGradient border-0 d-none d-md-block d-lg-block"
+                  id="containerHeroArtist"
+                ></div>
                 <!-- HERO ALBUM+ARTISTA -->
 
                 <!-- BUONA SERA CONTAINER -->
@@ -695,57 +644,60 @@
     <!-- END_MAIN -->
 
     <!-- BEGIN_FOOTER -->
-    <footer class="position-absolute bottom-0" style="width: 100%">
-      <div class="music-player">
-        <div class="song-bar">
-          <div class="song-infos">
-            <div class="image-container">
-              <img src="./assets/imgs/main/image-12.jpg" alt="" />
+    <footer>
+      <footer class="position-absolute bottom-0" style="width: 100%">
+        <div class="music-player">
+          <div class="song-bar">
+            <div class="song-infos">
+              <div class="image-container">
+                <img alt="" id="imgalbum" />
+              </div>
+              <div class="song-description">
+                <p class="title" id="titleaudio"></p>
+                <p class="artist" id="titleartist"></p>
+              </div>
             </div>
-            <div class="song-description">
-              <p class="title">titolo</p>
-              <p class="artist">artista</p>
+            <div class="icons">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-compress"></i>
             </div>
-          </div>
-          <div class="icons">
-            <i class="far fa-heart"></i>
-            <i class="fas fa-compress"></i>
-          </div>
-        </div>
-
-        <div class="progress-controller">
-          <div class="control-buttons">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
-            <i class="fas fa-step-forward"></i>
-            <i class="fas fa-undo-alt"></i>
           </div>
 
-          <div class="progress-container">
-            <span id="current-time">0:00</span>
-            <div class="progress-bar">
-              <div class="progress" id="progress"></div>
+          <div class="progress-controller">
+            <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
             </div>
-            <!-- da completare questo timer -->
-            <span id="duration">0:00</span>
+
+            <div class="progress-container">
+              <span id="current-time">0:00</span>
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              <!-- da completare questo timer -->
+              <span id="duration">0:00</span>
+            </div>
+            <audio id="audio-player" preload="metadata">
+              <source src="" type="audio/mp3" id="sourceSong" />
+            </audio>
           </div>
-          <audio id="audio-player" preload="metadata">
-            <source src="" type="audio/mp3" />
-          </audio>
-        </div>
-        <div class="other-features">
-          <i class="fas fa-list-ul"></i>
-          <i class="fas fa-desktop"></i>
-          <div class="volume-bar" id="volume-bar">
-            <i class="fas fa-volume-down"></i>
-            <div class="progress-bar" id="volume-bar">
-              <div class="progress" id="volume-progress"></div>
+          <div class="other-features">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <div class="volume-bar" id="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar" id="volume-bar">
+                <div class="progress" id="volume-progress"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </footer>
+
     <!-- END_FOOTER -->
 
     <!-- BEGIN_SCRIPT -->
