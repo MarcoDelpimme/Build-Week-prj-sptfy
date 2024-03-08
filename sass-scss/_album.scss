@@ -1,70 +1,47 @@
 #albumHeader {
-  height: 35vh;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgb(110, 19, 19) 22%, rgb(37, 0, 0) 100%);
-}
-
-#albumHeader img {
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-  overflow-y: scroll;
-  max-height: 95vh;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-#albumContent {
-  height: 48vh;
-  color: white;
-  background: linear-gradient(180deg, rgb(105, 33, 33) 0%, rgb(65, 9, 9) 11%, rgba(23, 23, 23, 1) 32%);
-  overflow-y: scroll;
-  max-height: 95vh;
-}
-
-.albumInfo {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  bottom: 2vh;
-  left: 2vh;
-}
-
-.albumName {
-  font-size: 4rem;
-  line-height: 2rem;
-  margin-bottom: 4vh;
-  font-weight: 900;
-}
-
-#hover-scale:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-@media (max-width: 1400px) {
+    height: 35vh;
+    overflow: hidden;
+    background: rgb(240,207,79);
+    background: linear-gradient(180deg, rgba(240,207,79,1) 22%, rgba(119,102,42,1) 100%);
+  }
+  
+  #albumHeader img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    
+  }
+  
+  #albumContent {
+    color: white;
+    background: rgb(97,83,29);
+    background: linear-gradient(180deg, rgba(97,83,29,1) 0%, rgba(100,89,49,1) 11%, rgba(23,23,23,1) 32%);
+  }
+  
+  .albumInfo{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+  }
+  
   .albumName {
-    font-size: 2.5rem;
-    margin-bottom: 2vh;
+    font-size: 4rem;
+    line-height: 1.5rem;
+    margin-bottom: 4vh;
+    font-weight: 900;
   }
+
+  #hover-scale:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+  }
+
+  @media (max-width: 767px) {
+    .albumName {
+        font-size: 1.5rem; 
+        margin-bottom: 2vh; 
+    }
 }
 
-@media (max-width: 900px) {
-  .albumName {
-    font-size: 1.5rem;
-    margin-bottom: 2vh;
-  }
-}
-
-@media (max-width: 767px) {
-  .col-9 {
-    width: 100% !important;
-  }
-}
-
-#centralContainer {
-  overflow-y: scroll;
-  height: 97vh;
-}
