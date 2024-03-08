@@ -29,8 +29,8 @@
 }
 
 .albumName {
-  font-size: 4rem;
-  line-height: 1.5rem;
+  font-size: 3.5rem;
+  line-height: 2rem;
   margin-bottom: 4vh;
   font-weight: 900;
 }
@@ -40,12 +40,23 @@
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 576px) {
+  .albumName {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media (max-width: 576px) {
   .albumName {
     font-size: 1.5rem;
     margin-bottom: 2vh;
   }
 }
+#centralContainer {
+  overflow-y: scroll;
+  height: 97vh;
+}
+
 @font-face {
   font-family: "CircularStd";
   src: url("../assets/fontsCircularStd.otf") format("opentype");

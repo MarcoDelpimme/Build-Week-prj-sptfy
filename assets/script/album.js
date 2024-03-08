@@ -115,7 +115,7 @@ async function displayAlbumInfo(albumId) {
               </div>
               <div class="col-2 text-center text-white-50 d-md-block d-none">${track.rank}</div>
               <div class="col-3 text-end text-white-50 d-md-block d-none">${track.duration + " s"}</div>
-              <div class="col-3 text-end text-white-50 d-lg-none d-block">
+              <div class="col-3 text-end text-white-50 d-md-none d-block">
                 <svg
                   opacity="0.5"
                   width="25px"
