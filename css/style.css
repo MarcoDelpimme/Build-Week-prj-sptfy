@@ -606,4 +606,8 @@ i:hover {
   color: #777777;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */

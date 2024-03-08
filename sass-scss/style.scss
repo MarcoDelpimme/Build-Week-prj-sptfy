@@ -430,7 +430,6 @@ i:hover {
   &:hover {
     color: $textColor;
   }
-  
 }
 
 .discCards {
@@ -478,7 +477,6 @@ i:hover {
   &:hover {
     color: $textColor;
   }
-  
 }
 
 .infoImgContainer {
@@ -554,4 +552,7 @@ i:hover {
 #visualizza-tutto {
   font-size: 11px;
   color: $textColor;
+}
+a {
+  text-decoration: none;
 }
