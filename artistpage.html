@@ -592,14 +592,14 @@
           <div class="song-bar">
             <div class="song-infos">
               <div class="image-container">
-                <img alt="" id="imgalbum" />
+                <img alt="" id="imgalbum" class="d-none d-md-block" />
               </div>
               <div class="song-description">
-                <p class="title" id="titleaudio"></p>
-                <p class="artist" id="titleartist"></p>
+                <p class="title d-none d-md-block" id="titleaudio"></p>
+                <p class="artist d-none d-md-block" id="titleartist"></p>
               </div>
             </div>
-            <div class="icons">
+            <div class="icons d-none d-md-block">
               <i class="far fa-heart"></i>
               <i class="fas fa-compress"></i>
             </div>
@@ -626,7 +626,7 @@
               <source src="" type="audio/mp3" id="sourceSong" />
             </audio>
           </div>
-          <div class="other-features">
+          <div class="other-features d-none d-md-flex">
             <i class="fas fa-list-ul"></i>
             <i class="fas fa-desktop"></i>
             <div class="volume-bar" id="volume-bar">
