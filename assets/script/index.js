@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     <div class="col-8">
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-8"><p>ALBUM</p></div>
-                          <div class="col-4">
+                          <div class="col-9"><p>${albumInfo.title}</p></div>
+                          <div class="col-3">
                             <button
                               type="button"
                               class="btn btn-sm rounded-pill btn-dark text-secondary"
