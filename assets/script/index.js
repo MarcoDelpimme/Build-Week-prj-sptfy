@@ -118,10 +118,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
    
                   
-                    <div class="col-4">
+                    <div class="col-3">
                       <img src="${albumInfo.cover_medium}" class="img-fluid rounded-start" alt="music" />
                     </div>
-                    <div class="col-8">
+                    <div class="col-9">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-9"><p>${albumInfo.title}</p></div>
