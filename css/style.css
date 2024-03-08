@@ -15,7 +15,6 @@
 }
 
 #albumContent {
-  height: 65vh;
   color: white;
   background: rgb(97, 83, 29);
   background: linear-gradient(180deg, rgb(97, 83, 29) 0%, rgb(100, 89, 49) 11%, rgb(23, 23, 23) 32%);
@@ -340,6 +339,14 @@ i:hover {
   z-index: -1;
 }
 
+/* #artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+} */
 .artistInfo {
   color: white;
   font-size: 20px;
@@ -466,6 +473,14 @@ i:hover {
   color: #2a2a2a;
 }
 
+#containerDisco a {
+  text-decoration: none;
+  color: #777777;
+}
+#containerDisco a:hover {
+  color: #777777;
+}
+
 .discCards {
   padding: 10px;
   border-radius: 15px;
@@ -502,6 +517,14 @@ i:hover {
 .discCards:hover .playButton {
   opacity: 1;
   transform: translateY(-10px);
+}
+
+#containerSuggested a {
+  text-decoration: none;
+  color: #777777;
+}
+#containerSuggested a:hover {
+  color: #777777;
 }
 
 .infoImgContainer {

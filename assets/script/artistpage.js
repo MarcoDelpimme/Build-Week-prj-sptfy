@@ -81,7 +81,7 @@ getAlbumsInfoByIds(shuffleAlbum).then((albumInfoArray) => {
     </div>
     <div class="discText">
     <p class="subtitles mb-0 mt-2">${albumInfo.title}</p>
-    <p>Ultima uscita</p>
+    <p>${albumInfo.artist}</p>
     </div>
 <a/>
   `;
@@ -124,13 +124,16 @@ const displayedAlbumIds = [];
 function displayResults(artistData) {
   const imgBg = document.getElementById("imgBg");
   const titlePageArtist = document.getElementById("artistTitle");
+  
 
   if (artistData && artistData.data) {
     const albums = artistData.data;
 
     imgBg.src = albums[1].artist.picture_xl;
     titlePageArtist.innerText = albums[1].artist.name;
-
+    const viewers = document.getElementById("viewers");
+    viewers.innerText =  Math.floor(Math.random() * 30000000)+ " monthly listeners"
+    
     albums.forEach((album, index) => {
       const resultsContainer = document.getElementById("containerSongs");
       const containerDisco = document.getElementById("containerDisco");
@@ -143,7 +146,9 @@ function displayResults(artistData) {
       const rank = album.rank;
       const duration = album.duration + "s";
       const idAlbum = album.album.id;
+      const type = album.album.type;
 
+      
       if (!displayedAlbumIds.includes(idAlbum)) {
         displayedAlbumIds.push(idAlbum);
         const templateDisco = `
@@ -155,7 +160,7 @@ function displayResults(artistData) {
     
     <div class="discText">
     <p class="subtitles mb-0 mt-2">${albumTitle}</p>
-    <p>Ultima uscita</p>
+    <p>${type}</p>
     </div>
   </a>`;
 

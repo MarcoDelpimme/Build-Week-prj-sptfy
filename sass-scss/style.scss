@@ -283,6 +283,15 @@ i:hover {
   z-index: -1;
 }
 
+/* #artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+} */
+
 .artistInfo {
   color: white;
   font-size: 20px;
@@ -414,6 +423,16 @@ i:hover {
   }
 }
 
+#containerDisco a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+  }
+  
+}
+
 .discCards {
   padding: 10px;
   border-radius: 15px;
@@ -450,6 +469,16 @@ i:hover {
 .discCards:hover .playButton {
   opacity: 1;
   transform: translateY(-10px);
+}
+
+#containerSuggested a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+  }
+  
 }
 
 .infoImgContainer {

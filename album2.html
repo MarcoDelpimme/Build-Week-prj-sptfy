@@ -39,7 +39,8 @@
     <main>
       <div class="container-fluid">
         <div class="row align-content-center">
-          <div class="col-3 asideBgColor textColor ps-4">
+          <!--  START LEFT ASIDE -->
+          <div class="d-none d-md-block col-md-3 asideBgColor textColor ps-4">
             <div class="container">
               <a href="#" style="text-decoration: none">
                 <div class="col-12 my-3" id="leftColumn">
@@ -111,26 +112,6 @@
                     <span class="ps-1">Your Library</span>
                   </div>
                 </a>
-              </div>
-
-              <div class="col-12">
-                <form id="searchForm">
-                  <label for="artistName">Artista:</label>
-                  <input type="text" id="artistName" name="artistName" required />
-                  <button type="submit">Cerca</button>
-                </form>
-              </div>
-
-              <div class="col-12">
-                <button
-                  type="button"
-                  id="offcanvasBtn"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
-                >
-                  Enable both scrolling & backdrop
-                </button>
               </div>
               <!-- HOME SEARCH LIBRARY END -->
 
@@ -233,7 +214,7 @@
 
           <!-- CENTRAL SECTION  -->
 
-          <div class="col-9">
+          <div class="col-12 col-md-9 p-0" id="centralContainer">
             <!--  HEADER OF ALBUM PAGE -->
 
             <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative"></div>
