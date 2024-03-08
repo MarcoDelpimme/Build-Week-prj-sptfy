@@ -38,7 +38,7 @@ async function getAlbumInfo(albumId) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "ce3a955d3dmsh2c1fe4098c8de2bp164eaajsn97005f1f60ae",
+      "X-RapidAPI-Key": token,
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   };
@@ -117,7 +117,7 @@ function searchDeezerArtist(artistName) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "ce3a955d3dmsh2c1fe4098c8de2bp164eaajsn97005f1f60ae",
+      "X-RapidAPI-Key": token,
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   };

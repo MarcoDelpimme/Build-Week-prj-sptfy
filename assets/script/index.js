@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "ce3a955d3dmsh2c1fe4098c8de2bp164eaajsn97005f1f60ae",
+        "X-RapidAPI-Key": token,
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     };
@@ -118,14 +118,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
    
                   
-                    <div class="col-3">
+                    <div class="col-4">
                       <img src="${albumInfo.cover_medium}" class="img-fluid rounded-start" alt="music" />
                     </div>
-                    <div class="col-9">
+                    <div class="col-8">
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-9"><p>${albumInfo.title}</p></div>
-                          <div class="col-3">
+                          <div class="col-8"><p>ALBUM</p></div>
+                          <div class="col-4">
                             <button
                               type="button"
                               class="btn btn-sm rounded-pill btn-dark text-secondary"
