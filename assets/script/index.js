@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     try {
       const response = await fetch(albumUrl, options);
-      console.log(response);
+
       if (!response.ok) {
         throw new Error(`Errore: ${response.status}`);
       }
@@ -59,8 +59,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         tracks: data.tracks.data,
         tracksName: data.tracks.data.title,
         previewSong: data.tracks.data[1].preview,
+        genre: data.genres.data[0].name,
       };
-      console.log(data);
+      console.log(data.genres.data[0].name);
       return albumInfo;
     } catch (errore) {
       console.error(errore.message);
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const albumIds = [
     595243, 75378, 122366, 382685427, 199146112, 7079242, 66768702, 253927, 212377, 9410100, 441697007, 239901952,
-    11611626, 373880, 73776,
+    11611626, 373880, 73776, 544889292, 477956265, 1604183,
   ];
 
   function getRandomId(array) {
@@ -95,11 +96,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log(randomID);
   const ranDiD = randomID;
 
-  const shuffleAlbum = albumIds.sort(() => Math.random() - 0.5).slice(0, 1);
+  const shuffleAlbum = albumIds.sort(() => Math.random() - 0.5);
   getAlbumsInfoByIds(shuffleAlbum).then((albumInfoArray) => {
     console.log(albumInfoArray);
 
-    albumInfoArray.forEach((albumInfo) => {
+    albumInfoArray.forEach((albumInfo, index) => {
       const containerHeroArtist = document.getElementById("containerHeroArtist");
       const headerHTML = document.createElement("div");
       headerHTML.classList.add("row");
@@ -163,7 +164,51 @@ document.addEventListener("DOMContentLoaded", (event) => {
   `;
       headerHTML.innerHTML = templateHeader;
       console.log(headerHTML);
-      containerHeroArtist.appendChild(headerHTML);
+
+      if (index === 0) {
+        containerHeroArtist.appendChild(headerHTML);
+      } else if (index < 7) {
+        const containerMoreAlbums = document.getElementById("containerMoreAlbums");
+        const moreAlbumHTML = document.createElement("div");
+        moreAlbumHTML.classList.add("col-lg-4", "col-sm-12", "col-md-6");
+        const templateMoreAlbum = `<a href="./album2.html?id=${albumInfo.id}">
+<div class="row g-0 background-card mb-3" id="allCardBuonasera">
+  <div class="col-4">
+    <img
+      src="${albumInfo.cover_medium}"
+      class="img-fluid rounded-start"
+      style="height: 100%; min-width: 100%"
+      alt="..."
+    />
+  </div>
+  <div class="col-8 d-flex align-items-center ps-2">
+    <h6 class="card-title">${albumInfo.title}</h6>
+  </div>
+</div></a>
+`;
+        moreAlbumHTML.innerHTML = templateMoreAlbum;
+        containerMoreAlbums.appendChild(moreAlbumHTML);
+      } else if (index > 6 && index < 15) {
+        const containerCardAlbum = document.getElementById("containerMoreAlbums");
+        const cardAlbumHTML = document.createElement("div");
+        cardAlbumHTML.classList.add("col-lg-3", "col-sm-12", "col-md-6", "p-3");
+
+        const templateCardAlbum = `
+        <a href="./album2.html?id=${albumInfo.id}">
+<div class="card h-100" id="darker">
+  <img src="${albumInfo.cover_medium}" class="card-img-top p-2" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">${albumInfo.title}</h5>
+    <div class="d-flex align-items-baseline justify-content-between">
+      <p class="card-text">${albumInfo.genre}</p>
+    </div>
+  </div>
+</div></a>
+`;
+
+        cardAlbumHTML.innerHTML = templateCardAlbum;
+        containerCardAlbum.appendChild(cardAlbumHTML);
+      }
 
       headerHTML.addEventListener("click", function (e) {
         const previewUrl = albumInfo.previewSong;
